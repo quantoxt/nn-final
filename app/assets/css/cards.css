@@ -1,0 +1,47 @@
+@import "tailwindcss";
+.card-wrap {
+  @apply flex flex-row flex-wrap items-center justify-center w-full gap-10;
+}
+.card {
+  img {
+    @apply rounded-[inherit] aspect-auto h-[230px] w-[350px];
+  }
+  .text-content {
+    @apply text-left flex w-full max-w-[inherit] flex-col gap-4;
+  }
+  .title {
+    @apply text-3xl text-[var(--color-dark)];
+  }
+  .author {
+    @apply text-gray-500;
+  }
+  .trope {
+    span {
+      @apply px-3 py-1 bg-[var(--color-primary)] text-white text-xs font-bold rounded-full shadow-md hover:bg-[var(--color-secondary)] transition-colors;
+    }
+    @apply px-3 border py-1 bg-[var(--color-primary)] text-white text-xs font-bold rounded-full shadow-md hover:bg-[var(--color-secondary)] transition-colors;
+  }
+  .extras {
+    .rating {
+      @apply inline-flex items-center gap-2 text-lg font-semibold;
+    }
+    .price {
+      @apply font-bold text-xl inline-flex items-center gap-2 text-[var(--color-accent)];
+    }
+    @apply flex justify-between w-full;
+  }
+  .btn-wrap a {
+    @apply w-full;
+  }
+  .btn-wrap button {
+    background: linear-gradient(
+      40deg,
+      var(--color-primary),
+      var(--color-accent)
+    );
+    @apply inline-flex items-center justify-center w-full gap-2 py-2 text-white rounded-lg cursor-pointer;
+  }
+  @apply flex-col flex items-center justify-center w-full max-w-[380px] p-4 bg-white rounded-2xl py-10 px-4 border border-red-100 border-2 gap-5;
+}
+
+

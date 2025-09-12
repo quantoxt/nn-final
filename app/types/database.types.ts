@@ -18,20 +18,19 @@ export type Database = {
         Row: {
           author_id: string
           bookshelves_book_id: string | null
-          category_id: string | null
+          category_id: string
+          category_slug: string | null
           chapter_price: number | null
           cover_image_url: string | null
           created_at: string
           description: string | null
           id: string
-          limited_edition_active: boolean | null
-          limited_edition_end: string | null
-          limited_edition_start: string | null
+          label: Database["public"]["Enums"]["book_label"] | null
           published_at: string | null
           rating: number
           reading_sessions_book_id: string | null
           saves: number | null
-          slug: string | null
+          slug: string
           status: Database["public"]["Enums"]["book_status"]
           title: string
           trope: string | null
@@ -40,20 +39,19 @@ export type Database = {
         Insert: {
           author_id?: string
           bookshelves_book_id?: string | null
-          category_id?: string | null
+          category_id: string
+          category_slug?: string | null
           chapter_price?: number | null
           cover_image_url?: string | null
           created_at?: string
           description?: string | null
           id?: string
-          limited_edition_active?: boolean | null
-          limited_edition_end?: string | null
-          limited_edition_start?: string | null
+          label?: Database["public"]["Enums"]["book_label"] | null
           published_at?: string | null
           rating?: number
           reading_sessions_book_id?: string | null
           saves?: number | null
-          slug?: string | null
+          slug: string
           status?: Database["public"]["Enums"]["book_status"]
           title: string
           trope?: string | null
@@ -62,20 +60,19 @@ export type Database = {
         Update: {
           author_id?: string
           bookshelves_book_id?: string | null
-          category_id?: string | null
+          category_id?: string
+          category_slug?: string | null
           chapter_price?: number | null
           cover_image_url?: string | null
           created_at?: string
           description?: string | null
           id?: string
-          limited_edition_active?: boolean | null
-          limited_edition_end?: string | null
-          limited_edition_start?: string | null
+          label?: Database["public"]["Enums"]["book_label"] | null
           published_at?: string | null
           rating?: number
           reading_sessions_book_id?: string | null
           saves?: number | null
-          slug?: string | null
+          slug?: string
           status?: Database["public"]["Enums"]["book_status"]
           title?: string
           trope?: string | null
@@ -95,6 +92,13 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "categories"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "books_category_slug_fkey"
+            columns: ["category_slug"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["slug"]
           },
         ]
       }
@@ -129,6 +133,13 @@ export type Database = {
             columns: ["book_id"]
             isOneToOne: false
             referencedRelation: "books"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bookshelves_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
         ]
@@ -213,7 +224,7 @@ export type Database = {
           created_at: string
           id: string
           related_entity_id: string | null
-          type: Database["public"]["Enums"]["coin_transaction_type"]
+          type: Database["public"]["Enums"]["transaction_type"] | null
           user_id: string
         }
         Insert: {
@@ -221,7 +232,7 @@ export type Database = {
           created_at?: string
           id?: string
           related_entity_id?: string | null
-          type: Database["public"]["Enums"]["coin_transaction_type"]
+          type?: Database["public"]["Enums"]["transaction_type"] | null
           user_id?: string
         }
         Update: {
@@ -229,10 +240,18 @@ export type Database = {
           created_at?: string
           id?: string
           related_entity_id?: string | null
-          type?: Database["public"]["Enums"]["coin_transaction_type"]
+          type?: Database["public"]["Enums"]["transaction_type"] | null
           user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "coin_transactions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       notifications: {
         Row: {
@@ -259,7 +278,15 @@ export type Database = {
           type?: Database["public"]["Enums"]["notification_type"]
           user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "notifications_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       profiles: {
         Row: {
@@ -271,7 +298,6 @@ export type Database = {
           notifications_user_id: string | null
           reading_sessions_user_id: string | null
           role: Database["public"]["Enums"]["user_role"]
-          updated_at: string
           username: string | null
         }
         Insert: {
@@ -283,7 +309,6 @@ export type Database = {
           notifications_user_id?: string | null
           reading_sessions_user_id?: string | null
           role?: Database["public"]["Enums"]["user_role"]
-          updated_at?: string
           username?: string | null
         }
         Update: {
@@ -295,10 +320,31 @@ export type Database = {
           notifications_user_id?: string | null
           reading_sessions_user_id?: string | null
           role?: Database["public"]["Enums"]["user_role"]
-          updated_at?: string
           username?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "profiles_bookshelves_user_id_fkey"
+            columns: ["bookshelves_user_id"]
+            isOneToOne: false
+            referencedRelation: "bookshelves"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "profiles_notifications_user_id_fkey"
+            columns: ["notifications_user_id"]
+            isOneToOne: false
+            referencedRelation: "notifications"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "profiles_reading_sessions_user_id_fkey"
+            columns: ["reading_sessions_user_id"]
+            isOneToOne: false
+            referencedRelation: "reading_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       reading_sessions: {
         Row: {
@@ -340,6 +386,20 @@ export type Database = {
             referencedRelation: "chapters"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "reading_sessions_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "books"
+            referencedColumns: ["reading_sessions_book_id"]
+          },
+          {
+            foreignKeyName: "reading_sessions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
         ]
       }
       reviews: {
@@ -378,6 +438,13 @@ export type Database = {
             referencedRelation: "books"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "reviews_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
         ]
       }
       user_chapter_unlocks: {
@@ -407,6 +474,13 @@ export type Database = {
             referencedRelation: "chapters"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "user_chapter_unlocks_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
         ]
       }
     }
@@ -420,25 +494,21 @@ export type Database = {
       }
     }
     Enums: {
+      book_label: "popular" | "trending" | "limited_edition"
       book_status:
-        | "DRAFT"
-        | "PENDING_REVIEW"
-        | "PUBLISHED"
-        | "ARCHIVED"
-        | "LIMITED_EDITION"
-      coin_transaction_type:
-        | "PURCHASE"
-        | "SPEND"
-        | "CASHOUT"
-        | "REFUND"
-        | "BONUS"
+        | "draft"
+        | "pending_review"
+        | "published"
+        | "rejected"
+        | "archived"
       notification_type:
         | "NEW_CHAPTER"
         | "BOOK_APPROVED"
         | "BOOK_REJECTED"
         | "COIN_PURCHASE_CONFIRMED"
         | "COIN_CASHOUT_PROCESSED"
-      shelf_status: "WANT_TO_READ" | "READING" | "COMPLETED" | "FAVORITE"
+      shelf_status: "want_to_read" | "reading" | "completed" | "favourite"
+      transaction_type: "purchase" | "spend"
       user_role: "reader" | "author" | "admin"
     }
     CompositeTypes: {
@@ -567,19 +637,13 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
+      book_label: ["popular", "trending", "limited_edition"],
       book_status: [
-        "DRAFT",
-        "PENDING_REVIEW",
-        "PUBLISHED",
-        "ARCHIVED",
-        "LIMITED_EDITION",
-      ],
-      coin_transaction_type: [
-        "PURCHASE",
-        "SPEND",
-        "CASHOUT",
-        "REFUND",
-        "BONUS",
+        "draft",
+        "pending_review",
+        "published",
+        "rejected",
+        "archived",
       ],
       notification_type: [
         "NEW_CHAPTER",
@@ -588,7 +652,8 @@ export const Constants = {
         "COIN_PURCHASE_CONFIRMED",
         "COIN_CASHOUT_PROCESSED",
       ],
-      shelf_status: ["WANT_TO_READ", "READING", "COMPLETED", "FAVORITE"],
+      shelf_status: ["want_to_read", "reading", "completed", "favourite"],
+      transaction_type: ["purchase", "spend"],
       user_role: ["reader", "author", "admin"],
     },
   },

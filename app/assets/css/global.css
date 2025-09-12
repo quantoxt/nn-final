@@ -1,0 +1,55 @@
+@import "tailwindcss";
+*{
+    transition:all .3s;
+    box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;
+}
+body {
+@apply bg-white text-gray-800;
+font-family: 'Inter', system-ui, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+@apply font-semibold text-center;
+}
+h1 {
+@apply text-4xl md:text-5xl;
+}
+h2 {
+@apply text-3xl md:text-4xl;
+}
+
+h3 {
+@apply text-2xl md:text-3xl;
+}
+p{
+    @apply text-center
+}
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+::-webkit-scrollbar-track:hover {
+  background: var(--color-light);
+}
+::-webkit-scrollbar-corner {
+  background: var(--color-light);
+}

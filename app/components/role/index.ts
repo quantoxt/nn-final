@@ -1,0 +1,1 @@
+export {default as RoleBasedRender} from './authorizer.vue'

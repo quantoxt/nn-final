@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Mafia",
+    "slug": "mafia"
+  },
+  {
+    "title": "Werewolf",
+    "slug": "werewolf"
+  },
+  {
+    "title": "Fantasy",
+    "slug": "fantasy"
+  },
+  {
+    "title": "LGBTQ+",
+    "slug": "lgbtq"
+  },
+  {
+    "title": "Billionaire",
+    "slug": "billionaire"
+  },
+  {
+    "title": "Erotica",
+    "slug": "erotica"
+  },
+  {
+    "title": "Young Adult",
+    "slug": "young-adult"
+  }
+]

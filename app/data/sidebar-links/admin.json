@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Overview",
+    "link": "/dashboard/admin"
+  },
+  {
+    "title": "Pending Approvals",
+    "link": "/dashboard/admin/pending-books"
+  },
+  {
+    "title":"Users",
+    "link":"/dashboard/admin/users"
+  },
+  {
+    "title": "Approved",
+    "link": "/dashboard/admin/approved-books"
+  }
+]

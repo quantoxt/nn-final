@@ -1,0 +1,70 @@
+@import "tailwindcss";
+:root {
+  --color-primary: #dc2626; /* red-600 */
+  --color-secondary: #ea580c; /* orange-600 */
+  --color-accent: #f97316; /* orange-500 */
+  --color-light: #ffffff; /* white */
+  --color-dark: #1f2937; /* gray-800 */
+}
+
+section {
+  @apply w-full flex flex-col items-center justify-center py-12 md:py-16 lg:py-20 mb-12 md:mb-16 lg:mb-20 my-20 px-2;
+}
+
+section.full {
+  .sect-title {
+    @apply md:text-7xl;
+  }
+  @apply min-h-[90dvh] bg-red-100 mt-0;
+}
+section.half {
+  @apply min-h-[50dvh];
+}
+section.small{
+  @apply min-h-[10dvh];
+}
+section.shade {
+  @apply bg-red-50;
+}
+.wrapper {
+  @apply gap-6 flex flex-col items-center justify-center max-w-[1500px] w-full mx-auto;
+}
+.sect-details {
+  .sect-title {
+    span {
+      background: linear-gradient(to left, var(--color-primary), var(--color-accent), var(--color-accent));
+      @apply text-transparent bg-clip-text ;
+    }
+    @apply text-4xl md:text-5xl font-bold text-center
+  }
+  .sect-subtitle {
+    @apply text-center font-semibold text-lg max-w-[600px] mx-auto px-10 text-gray-500;
+  }
+  @apply flex flex-col gap-5 mb-10;
+}
+.btn-wrap {
+  @apply flex flex-wrap gap-5 justify-center items-center w-full mb-5;
+}
+.svg{
+  @apply w-6 h-6;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.animate-float {
+  animation: float 15s linear infinite;
+}

@@ -4,7 +4,8 @@
 
 <template>
     <main class="dark">
-        <slot/>
+        <slot />
+        <misc-footer/>
     </main>
 </template>
 

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Home",
+    "path": "/"
+  },
+  {
+    "name": "Categories",
+    "path": "/portfolio"
+  },
+  {
+    "name": "Shop",
+    "path": "/pricing"
+  },
+  {
+    "name": "Author Application",
+    "path": "/author-application"
+  },
+  {
+    "name":"More",
+    "path": ""
+  }
+]

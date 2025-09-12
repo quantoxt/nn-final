@@ -1,0 +1,9 @@
+<script setup lang="ts">
+import { RoleBasedRender } from "."
+</script>
+
+<template>
+    <RoleBasedRender roles="reader" v-bind="$attrs" :show-fallback="false">
+        <slot />
+    </RoleBasedRender>
+</template>

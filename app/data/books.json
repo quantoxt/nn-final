@@ -1,0 +1,2452 @@
+[
+  {
+    "id": "book-1",
+    "title": "Midnight Heir",
+    "author": "Samantha Reed",
+    "cover": "/images/blonde-girl.jpg",
+    "rating": 4.8,
+    "category_slug": "billionaire",
+    "description": "A powerful CEO discovers his heart when he meets a struggling artist who refuses his money. Their forbidden romance sparks passion and danger.",
+    "status": "PUBLISHED",
+    "trope": "Enemies to lovers",
+    "book_slug": "midnight-heir",
+    "chapters": [
+      {
+        "id": "chap-1-1",
+        "chapter_number": 1,
+        "title": "A Chance Encounter",
+        "content_url": "/content/book-1/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-1-2",
+        "chapter_number": 2,
+        "title": "The Art of Seduction",
+        "content_url": "/content/book-1/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-1-3",
+        "chapter_number": 3,
+        "title": "Secrets Revealed",
+        "content_url": "/content/book-1/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-1-4",
+        "chapter_number": 4,
+        "title": "Dangerous Liaisons",
+        "content_url": "/content/book-1/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-1-5",
+        "chapter_number": 5,
+        "title": "The Midnight Promise",
+        "content_url": "/content/book-1/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1247
+  },
+  {
+    "id": "book-2",
+    "title": "The Billionaire's Vow",
+    "author": "Eleanor Grace",
+    "cover": "/images/blonde-girl.jpg",
+    "rating": 4.9,
+    "category_slug": "billionaire",
+    "description": "After a tragic past, a reclusive billionaire finds hope in an unexpected love that challenges his guarded heart.",
+    "status": "PUBLISHED",
+    "trope": "Grumpy sunshine",
+    "book_slug": "billionaires-vow",
+    "chapters": [
+      {
+        "id": "chap-2-1",
+        "chapter_number": 1,
+        "title": "An Unexpected Meeting",
+        "content_url": "/content/book-2/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-2-2",
+        "chapter_number": 2,
+        "title": "The Proposal",
+        "content_url": "/content/book-2/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-2-3",
+        "chapter_number": 3,
+        "title": "Walls of Ice",
+        "content_url": "/content/book-2/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-2-4",
+        "chapter_number": 4,
+        "title": "A Glimmer of Hope",
+        "content_url": "/content/book-2/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-2-5",
+        "chapter_number": 5,
+        "title": "The Billionaire's Promise",
+        "content_url": "/content/book-2/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1423
+  },
+  {
+    "id": "book-3",
+    "title": "Fortune's Embrace",
+    "author": "Victoria Lane",
+    "cover": "/images/blonde-girl.jpg",
+    "rating": 4.2,
+    "category_slug": "billionaire",
+    "description": "A woman inherits a fortune but must navigate the dangerous world of high society and a mysterious benefactor.",
+    "status": "PUBLISHED",
+    "trope": "Inheritance romance",
+    "book_slug": "fortunes-embrace",
+    "chapters": [
+      {
+        "id": "chap-3-1",
+        "chapter_number": 1,
+        "title": "The Inheritance",
+        "content_url": "/content/book-3/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-3-2",
+        "chapter_number": 2,
+        "title": "High Society",
+        "content_url": "/content/book-3/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-3-3",
+        "chapter_number": 3,
+        "title": "The Mysterious Benefactor",
+        "content_url": "/content/book-3/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-3-4",
+        "chapter_number": 4,
+        "title": "Dangerous Alliances",
+        "content_url": "/content/book-3/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-3-5",
+        "chapter_number": 5,
+        "title": "Fortune's Embrace",
+        "content_url": "/content/book-3/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 543
+  },
+  {
+    "id": "book-4",
+    "title": "The Tycoon's Temptation",
+    "author": "Sophia Bell",
+    "cover": "/images/blonde-girl.jpg",
+    "rating": 4.6,
+    "category_slug": "billionaire",
+    "description": "A business rivalry turns into a passionate affair when two powerful CEOs are forced to work together.",
+    "status": "PUBLISHED",
+    "trope": "Rivals to lovers",
+    "book_slug": "tycoons-temptation",
+    "chapters": [
+      {
+        "id": "chap-4-1",
+        "chapter_number": 1,
+        "title": "Boardroom Rivals",
+        "content_url": "/content/book-4/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-4-2",
+        "chapter_number": 2,
+        "title": "Forced Partnership",
+        "content_url": "/content/book-4/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-4-3",
+        "chapter_number": 3,
+        "title": "Business After Hours",
+        "content_url": "/content/book-4/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-4-4",
+        "chapter_number": 4,
+        "title": "The Temptation Grows",
+        "content_url": "/content/book-4/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-4-5",
+        "chapter_number": 5,
+        "title": "Love and Business",
+        "content_url": "/content/book-4/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 889
+  },
+  {
+    "id": "book-5",
+    "title": "Millionaire's Mistake",
+    "author": "Olivia Hart",
+    "cover": "/images/blonde-girl.jpg",
+    "rating": 4.1,
+    "category_slug": "billionaire",
+    "description": "One night changes everything when a wealthy man discovers he has a child from a past relationship.",
+    "status": "PUBLISHED",
+    "trope": "Baby romance",
+    "book_slug": "millionaires-mistake",
+    "chapters": [
+      {
+        "id": "chap-5-1",
+        "chapter_number": 1,
+        "title": "One Night",
+        "content_url": "/content/book-5/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-5-2",
+        "chapter_number": 2,
+        "title": "The Revelation",
+        "content_url": "/content/book-5/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-5-3",
+        "chapter_number": 3,
+        "title": "A Father's Duty",
+        "content_url": "/content/book-5/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-5-4",
+        "chapter_number": 4,
+        "title": "Building a Family",
+        "content_url": "/content/book-5/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-5-5",
+        "chapter_number": 5,
+        "title": "A New Beginning",
+        "content_url": "/content/book-5/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 467
+  },
+  {
+    "id": "book-6",
+    "title": "Blood Oath",
+    "author": "Marcus Kane",
+    "cover": "/images/red-lips.jpg",
+    "rating": 4.7,
+    "category_slug": "mafia",
+    "description": "A woman caught in the crossfire of a mafia war becomes the obsession of a dangerous don who will protect her at all costs.",
+    "status": "PUBLISHED",
+    "trope": "Dark romance",
+    "book_slug": "blood-oath",
+    "chapters": [
+      {
+        "id": "chap-6-1",
+        "chapter_number": 1,
+        "title": "Caught in the Crossfire",
+        "content_url": "/content/book-6/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-6-2",
+        "chapter_number": 2,
+        "title": "The Don's Protection",
+        "content_url": "/content/book-6/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-6-3",
+        "chapter_number": 3,
+        "title": "Dangerous Desires",
+        "content_url": "/content/book-6/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-6-4",
+        "chapter_number": 4,
+        "title": "Blood and Betrayal",
+        "content_url": "/content/book-6/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-6-5",
+        "chapter_number": 5,
+        "title": "The Ultimate Sacrifice",
+        "content_url": "/content/book-6/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1345
+  },
+  {
+    "id": "book-7",
+    "title": "Mafia's Honor",
+    "author": "Carmen Vega",
+    "cover": "/images/red-lips.jpg",
+    "rating": 4.8,
+    "category_slug": "mafia",
+    "description": "To save her family, she agrees to marry the most feared mafia boss in the city.",
+    "status": "PUBLISHED",
+    "trope": "Forced marriage",
+    "book_slug": "mafias-honor",
+    "chapters": [
+      {
+        "id": "chap-7-1",
+        "chapter_number": 1,
+        "title": "Family First",
+        "content_url": "/content/book-7/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-7-2",
+        "chapter_number": 2,
+        "title": "The Arrangement",
+        "content_url": "/content/book-7/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-7-3",
+        "chapter_number": 3,
+        "title": "The Wedding Night",
+        "content_url": "/content/book-7/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-7-4",
+        "chapter_number": 4,
+        "title": "Honor Among Thieves",
+        "content_url": "/content/book-7/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-7-5",
+        "chapter_number": 5,
+        "title": "Love and Loyalty",
+        "content_url": "/content/book-7/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1567
+  },
+  {
+    "id": "book-8",
+    "title": "Don's Desire",
+    "author": "Luca Romano",
+    "cover": "/images/red-lips.jpg",
+    "rating": 4.9,
+    "category_slug": "mafia",
+    "description": "She was supposed to be his enemy, but their attraction is stronger than their families' hatred.",
+    "status": "PUBLISHED",
+    "trope": "Enemies to lovers",
+    "book_slug": "dons-desire",
+    "chapters": [
+      {
+        "id": "chap-8-1",
+        "chapter_number": 1,
+        "title": "Family Feud",
+        "content_url": "/content/book-8/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-8-2",
+        "chapter_number": 2,
+        "title": "Forbidden Attraction",
+        "content_url": "/content/book-8/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-8-3",
+        "chapter_number": 3,
+        "title": "Secret Meetings",
+        "content_url": "/content/book-8/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-8-4",
+        "chapter_number": 4,
+        "title": "Blood Ties",
+        "content_url": "/content/book-8/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-8-5",
+        "chapter_number": 5,
+        "title": "Love Conquers All",
+        "content_url": "/content/book-8/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1890
+  },
+  {
+    "id": "book-9",
+    "title": "Sinful Allegiance",
+    "author": "Isabella Rossi",
+    "cover": "/images/red-lips.jpg",
+    "rating": 4.6,
+    "category_slug": "mafia",
+    "description": "An undercover cop infiltrates the mafia and falls for the boss she's supposed to bring down.",
+    "status": "PUBLISHED",
+    "trope": "Undercover romance",
+    "book_slug": "sinful-allegiance",
+    "chapters": [
+      {
+        "id": "chap-9-1",
+        "chapter_number": 1,
+        "title": "Undercover",
+        "content_url": "/content/book-9/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-9-2",
+        "chapter_number": 2,
+        "title": "The Target",
+        "content_url": "/content/book-9/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-9-3",
+        "chapter_number": 3,
+        "title": "Dangerous Liaisons",
+        "content_url": "/content/book-9/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-9-4",
+        "chapter_number": 4,
+        "title": "Betrayal and Desire",
+        "content_url": "/content/book-9/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-9-5",
+        "chapter_number": 5,
+        "title": "A New Allegiance",
+        "content_url": "/content/book-9/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1234
+  },
+  {
+    "id": "book-10",
+    "title": "Mafia's Redemption",
+    "author": "Dante Moretti",
+    "cover": "/images/red-lips.jpg",
+    "rating": 4.5,
+    "category_slug": "mafia",
+    "description": "A ruthless mafia boss seeks redemption through the love of an innocent woman who sees his humanity.",
+    "status": "PUBLISHED",
+    "trope": "Anti-hero",
+    "book_slug": "mafias-redemption",
+    "chapters": [
+      {
+        "id": "chap-10-1",
+        "chapter_number": 1,
+        "title": "The Ruthless Don",
+        "content_url": "/content/book-10/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-10-2",
+        "chapter_number": 2,
+        "title": "An Innocent Encounter",
+        "content_url": "/content/book-10/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-10-3",
+        "chapter_number": 3,
+        "title": "A Glimmer of Humanity",
+        "content_url": "/content/book-10/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-10-4",
+        "chapter_number": 4,
+        "title": "The Path to Redemption",
+        "content_url": "/content/book-10/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-10-5",
+        "chapter_number": 5,
+        "title": "A New Beginning",
+        "content_url": "/content/book-10/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 987
+  },
+  {
+    "id": "book-11",
+    "title": "Luna's Call",
+    "author": "Elena Moon",
+    "cover": "/images/werewolf.jpg",
+    "rating": 4.7,
+    "category_slug": "werewolf",
+    "description": "A woman discovers she's the mate of a powerful werewolf alpha when she moves to a mysterious mountain town.",
+    "status": "PUBLISHED",
+    "trope": "Fated mates",
+    "book_slug": "lunas-call",
+    "chapters": [
+      {
+        "id": "chap-11-1",
+        "chapter_number": 1,
+        "title": "The Mountain Town",
+        "content_url": "/content/book-11/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-11-2",
+        "chapter_number": 2,
+        "title": "Mysterious Attraction",
+        "content_url": "/content/book-11/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-11-3",
+        "chapter_number": 3,
+        "title": "The Revelation",
+        "content_url": "/content/book-11/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-11-4",
+        "chapter_number": 4,
+        "title": "Pack Politics",
+        "content_url": "/content/book-11/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-11-5",
+        "chapter_number": 5,
+        "title": "Luna's Embrace",
+        "content_url": "/content/book-11/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1234
+  },
+  {
+    "id": "book-12",
+    "title": "Alpha's Claim",
+    "author": "Derek Wolf",
+    "cover": "/images/werewolf.jpg",
+    "rating": 4.8,
+    "category_slug": "werewolf",
+    "description": "As the new alpha, he must claim his mate to secure his pack's future, but she resists his primal pull.",
+    "status": "PUBLISHED",
+    "trope": "Alpha/omega dynamics",
+    "book_slug": "alphas-claim",
+    "chapters": [
+      {
+        "id": "chap-12-1",
+        "chapter_number": 1,
+        "title": "The New Alpha",
+        "content_url": "/content/book-12/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-12-2",
+        "chapter_number": 2,
+        "title": "The Resistant Mate",
+        "content_url": "/content/book-12/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-12-3",
+        "chapter_number": 3,
+        "title": "Primal Instincts",
+        "content_url": "/content/book-12/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-12-4",
+        "chapter_number": 4,
+        "title": "Pack in Peril",
+        "content_url": "/content/book-12/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-12-5",
+        "chapter_number": 5,
+        "title": "The Alpha's Claim",
+        "content_url": "/content/book-12/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1456
+  },
+  {
+    "id": "book-13",
+    "title": "Moonbound",
+    "author": "Selena Night",
+    "cover": "/images/werewolf.jpg",
+    "rating": 4.6,
+    "category_slug": "werewolf",
+    "description": "She's a lone wolf who's never belonged, until she meets a pack that ignites something primal within her.",
+    "status": "PUBLISHED",
+    "trope": "Lone wolf finds pack",
+    "book_slug": "moonbound",
+    "chapters": [
+      {
+        "id": "chap-13-1",
+        "chapter_number": 1,
+        "title": "The Lone Wolf",
+        "content_url": "/content/book-13/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-13-2",
+        "chapter_number": 2,
+        "title": "A New Pack",
+        "content_url": "/content/book-13/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-13-3",
+        "chapter_number": 3,
+        "title": "Primal Awakening",
+        "content_url": "/content/book-13/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-13-4",
+        "chapter_number": 4,
+        "title": "Pack Bonds",
+        "content_url": "/content/book-13/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-13-5",
+        "chapter_number": 5,
+        "title": "Bound by the Moon",
+        "content_url": "/content/book-13/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1123
+  },
+  {
+    "id": "book-14",
+    "title": "Howl of Desire",
+    "author": "Kane Wilder",
+    "cover": "/images/werewolf.jpg",
+    "rating": 4.5,
+    "category_slug": "werewolf",
+    "description": "Their packs are at war, but their bodies and souls recognize each other as true mates.",
+    "status": "PUBLISHED",
+    "trope": "Enemies to lovers",
+    "book_slug": "howl-of-desire",
+    "chapters": [
+      {
+        "id": "chap-14-1",
+        "chapter_number": 1,
+        "title": "Warring Packs",
+        "content_url": "/content/book-14/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-14-2",
+        "chapter_number": 2,
+        "title": "Forbidden Attraction",
+        "content_url": "/content/book-14/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-14-3",
+        "chapter_number": 3,
+        "title": "Secret Meetings",
+        "content_url": "/content/book-14/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-14-4",
+        "chapter_number": 4,
+        "title": "The Howl of Desire",
+        "content_url": "/content/book-14/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-14-5",
+        "chapter_number": 5,
+        "title": "United Souls",
+        "content_url": "/content/book-14/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 987
+  },
+  {
+    "id": "book-15",
+    "title": "Wolf's Heart",
+    "author": "Luna Grey",
+    "cover": "/images/werewolf.jpg",
+    "rating": 4.9,
+    "category_slug": "werewolf",
+    "description": "A human woman discovers she's a rare wolf whisperer who can calm even the most feral werewolves.",
+    "status": "PUBLISHED",
+    "trope": "Human with special power",
+    "book_slug": "wolfs-heart",
+    "chapters": [
+      {
+        "id": "chap-15-1",
+        "chapter_number": 1,
+        "title": "The Human Among Wolves",
+        "content_url": "/content/book-15/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-15-2",
+        "chapter_number": 2,
+        "title": "A Hidden Gift",
+        "content_url": "/content/book-15/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-15-3",
+        "chapter_number": 3,
+        "title": "The Feral Alpha",
+        "content_url": "/content/book-15/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-15-4",
+        "chapter_number": 4,
+        "title": "Pack in Crisis",
+        "content_url": "/content/book-15/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-15-5",
+        "chapter_number": 5,
+        "title": "The Wolf's Heart",
+        "content_url": "/content/book-15/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1678
+  },
+  {
+    "id": "book-16",
+    "title": "Young Love",
+    "author": "Emma Taylor",
+    "cover": "/images/models.jpg",
+    "rating": 4.5,
+    "category_slug": "young-adult",
+    "description": "Two high school seniors navigate first love, friendship, and the challenges of growing up.",
+    "status": "PUBLISHED",
+    "trope": "First love",
+    "book_slug": "young-love",
+    "chapters": [
+      {
+        "id": "chap-16-1",
+        "chapter_number": 1,
+        "title": "Senior Year",
+        "content_url": "/content/book-16/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-16-2",
+        "chapter_number": 2,
+        "title": "First Love",
+        "content_url": "/content/book-16/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-16-3",
+        "chapter_number": 3,
+        "title": "Growing Pains",
+        "content_url": "/content/book-16/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-16-4",
+        "chapter_number": 4,
+        "title": "Heartbreak and Healing",
+        "content_url": "/content/book-16/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-16-5",
+        "chapter_number": 5,
+        "title": "Forever Young",
+        "content_url": "/content/book-16/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1123
+  },
+  {
+    "id": "book-17",
+    "title": "Teen Hearts",
+    "author": "Jake Wilson",
+    "cover": "/images/models.jpg",
+    "rating": 4.3,
+    "category_slug": "young-adult",
+    "description": "A shy bookworm and a popular athlete find common ground through their shared love of music.",
+    "status": "PUBLISHED",
+    "trope": "Opposites attract",
+    "book_slug": "teen-hearts",
+    "chapters": [
+      {
+        "id": "chap-17-1",
+        "chapter_number": 1,
+        "title": "Opposites Attract",
+        "content_url": "/content/book-17/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-17-2",
+        "chapter_number": 2,
+        "title": "The Language of Music",
+        "content_url": "/content/book-17/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-17-3",
+        "chapter_number": 3,
+        "title": "Secret Feelings",
+        "content_url": "/content/book-17/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-17-4",
+        "chapter_number": 4,
+        "title": "Coming Out",
+        "content_url": "/content/book-17/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-17-5",
+        "chapter_number": 5,
+        "title": "Young Love",
+        "content_url": "/content/book-17/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 987
+  },
+  {
+    "id": "book-18",
+    "title": "High School Crush",
+    "author": "Lily Chen",
+    "cover": "/images/models.jpg",
+    "rating": 4.6,
+    "category_slug": "young-adult",
+    "description": "After years apart, childhood friends reunite in high school and rediscover their feelings.",
+    "status": "PUBLISHED",
+    "trope": "Childhood friends to lovers",
+    "book_slug": "high-school-crush",
+    "chapters": [
+      {
+        "id": "chap-18-1",
+        "chapter_number": 1,
+        "title": "Childhood Friends",
+        "content_url": "/content/book-18/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-18-2",
+        "chapter_number": 2,
+        "title": "Reunited",
+        "content_url": "/content/book-18/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-18-3",
+        "chapter_number": 3,
+        "title": "Old Feelings",
+        "content_url": "/content/book-18/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-18-4",
+        "chapter_number": 4,
+        "title": "High School Drama",
+        "content_url": "/content/book-18/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-18-5",
+        "chapter_number": 5,
+        "title": "The Crush",
+        "content_url": "/content/book-18/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1345
+  },
+  {
+    "id": "book-19",
+    "title": "Prom Night",
+    "author": "Tyler Reed",
+    "cover": "/images/models.jpg",
+    "rating": 4.2,
+    "category_slug": "young-adult",
+    "description": "One night can change everything when secrets are revealed at the senior prom.",
+    "status": "PUBLISHED",
+    "trope": "One night romance",
+    "book_slug": "prom-night",
+    "chapters": [
+      {
+        "id": "chap-19-1",
+        "chapter_number": 1,
+        "title": "Prom Preparations",
+        "content_url": "/content/book-19/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-19-2",
+        "chapter_number": 2,
+        "title": "The Big Night",
+        "content_url": "/content/book-19/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-19-3",
+        "chapter_number": 3,
+        "title": "Secrets Revealed",
+        "content_url": "/content/book-19/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-19-4",
+        "chapter_number": 4,
+        "title": "Heartbreak",
+        "content_url": "/content/book-19/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-19-5",
+        "chapter_number": 5,
+        "title": "A New Beginning",
+        "content_url": "/content/book-19/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 876
+  },
+  {
+    "id": "book-20",
+    "title": "Summer Fling",
+    "author": "Maya Rodriguez",
+    "cover": "/images/models.jpg",
+    "rating": 4.7,
+    "category_slug": "young-adult",
+    "description": "A summer romance turns serious when two teens from different worlds fall deeply in love.",
+    "status": "PUBLISHED",
+    "trope": "Summer romance",
+    "book_slug": "summer-fling",
+    "chapters": [
+      {
+        "id": "chap-20-1",
+        "chapter_number": 1,
+        "title": "Summer Vacation",
+        "content_url": "/content/book-20/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-20-2",
+        "chapter_number": 2,
+        "title": "A Chance Meeting",
+        "content_url": "/content/book-20/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-20-3",
+        "chapter_number": 3,
+        "title": "Summer Romance",
+        "content_url": "/content/book-20/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-20-4",
+        "chapter_number": 4,
+        "title": "Different Worlds",
+        "content_url": "/content/book-20/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-20-5",
+        "chapter_number": 5,
+        "title": "More Than a Fling",
+        "content_url": "/content/book-20/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1456
+  },
+  {
+    "id": "book-21",
+    "title": "Magic Kingdom",
+    "author": "Arthur Pendragon",
+    "cover": "/images/girl-fantasy.jpg",
+    "rating": 4.9,
+    "category_slug": "fantasy",
+    "description": "A young orphan discovers he's the heir to a magical kingdom and must master his powers to defeat an ancient evil.",
+    "status": "PUBLISHED",
+    "trope": "Chosen one",
+    "book_slug": "magic-kingdom",
+    "chapters": [
+      {
+        "id": "chap-21-1",
+        "chapter_number": 1,
+        "title": "The Orphan",
+        "content_url": "/content/book-21/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-21-2",
+        "chapter_number": 2,
+        "title": "The Revelation",
+        "content_url": "/content/book-21/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-21-3",
+        "chapter_number": 3,
+        "title": "Magical Training",
+        "content_url": "/content/book-21/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-21-4",
+        "chapter_number": 4,
+        "title": "The Ancient Evil",
+        "content_url": "/content/book-21/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-21-5",
+        "chapter_number": 5,
+        "title": "Kingdom Restored",
+        "content_url": "/content/book-21/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 2100
+  },
+  {
+    "id": "book-22",
+    "title": "Dragon's Legacy",
+    "author": "Merlin Blackwood",
+    "cover": "/images/girl-fantasy.jpg",
+    "rating": 4.7,
+    "category_slug": "fantasy",
+    "description": "The last dragon rider must awaken the ancient dragons to save the world from darkness.",
+    "status": "PUBLISHED",
+    "trope": "Last of their kind",
+    "book_slug": "dragons-legacy",
+    "chapters": [
+      {
+        "id": "chap-22-1",
+        "chapter_number": 1,
+        "title": "The Last Rider",
+        "content_url": "/content/book-22/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-22-2",
+        "chapter_number": 2,
+        "title": "The Dragon Egg",
+        "content_url": "/content/book-22/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-22-3",
+        "chapter_number": 3,
+        "title": "The Awakening",
+        "content_url": "/content/book-22/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-22-4",
+        "chapter_number": 4,
+        "title": "The Gathering Darkness",
+        "content_url": "/content/book-22/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-22-5",
+        "chapter_number": 5,
+        "title": "Dragons Reborn",
+        "content_url": "/content/book-22/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1890
+  },
+  {
+    "id": "book-23",
+    "title": "Elven Prophecy",
+    "author": "Luna Silverleaf",
+    "cover": "/images/girl-fantasy.jpg",
+    "rating": 4.8,
+    "category_slug": "fantasy",
+    "description": "A half-elf must fulfill an ancient prophecy to unite the fractured elven clans.",
+    "status": "PUBLISHED",
+    "trope": "Prophecy fulfillment",
+    "book_slug": "elven-prophecy",
+    "chapters": [
+      {
+        "id": "chap-23-1",
+        "chapter_number": 1,
+        "title": "The Half-Elf",
+        "content_url": "/content/book-23/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-23-2",
+        "chapter_number": 2,
+        "title": "Ancient Words",
+        "content_url": "/content/book-23/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-23-3",
+        "chapter_number": 3,
+        "title": "Fractured Clans",
+        "content_url": "/content/book-23/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-23-4",
+        "chapter_number": 4,
+        "title": "The Quest",
+        "content_url": "/content/book-23/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-23-5",
+        "chapter_number": 5,
+        "title": "Elven Unity",
+        "content_url": "/content/book-23/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1765
+  },
+  {
+    "id": "book-24",
+    "title": "Wizard's Oath",
+    "author": "Gandor the Wise",
+    "cover": "/images/girl-fantasy.jpg",
+    "rating": 4.6,
+    "category_slug": "fantasy",
+    "description": "A young wizard must choose between loyalty to his order and love for a forbidden sorceress.",
+    "status": "PUBLISHED",
+    "trope": "Forbidden magic",
+    "book_slug": "wizards-oath",
+    "chapters": [
+      {
+        "id": "chap-24-1",
+        "chapter_number": 1,
+        "title": "The Young Wizard",
+        "content_url": "/content/book-24/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-24-2",
+        "chapter_number": 2,
+        "title": "The Forbidden Sorceress",
+        "content_url": "/content/book-24/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-24-3",
+        "chapter_number": 3,
+        "title": "Forbidden Magic",
+        "content_url": "/content/book-24/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-24-4",
+        "chapter_number": 4,
+        "title": "The Wizard's Dilemma",
+        "content_url": "/content/book-24/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-24-5",
+        "chapter_number": 5,
+        "title": "The Final Oath",
+        "content_url": "/content/book-24/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1543
+  },
+  {
+    "id": "book-25",
+    "title": "Fae Realm",
+    "author": "Titania Nightshade",
+    "cover": "/images/girl-fantasy.jpg",
+    "rating": 4.9,
+    "category_slug": "fantasy",
+    "description": "A mortal woman is pulled into the dangerous world of fae politics and forbidden romance.",
+    "status": "PUBLISHED",
+    "trope": "Mortal in fae world",
+    "book_slug": "fae-realm",
+    "chapters": [
+      {
+        "id": "chap-25-1",
+        "chapter_number": 1,
+        "title": "The Mortal Woman",
+        "content_url": "/content/book-25/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-25-2",
+        "chapter_number": 2,
+        "title": "Into the Fae World",
+        "content_url": "/content/book-25/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-25-3",
+        "chapter_number": 3,
+        "title": "Fae Politics",
+        "content_url": "/content/book-25/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-25-4",
+        "chapter_number": 4,
+        "title": "Forbidden Romance",
+        "content_url": "/content/book-25/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-25-5",
+        "chapter_number": 5,
+        "title": "Between Worlds",
+        "content_url": "/content/book-25/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 2234
+  },
+  {
+    "id": "book-26",
+    "title": "Forbidden Desires",
+    "author": "Scarlett Wilde",
+    "cover": "/images/sexy-girl.jpg",
+    "rating": 4.8,
+    "category_slug": "erotica",
+    "description": "A steamy office romance between a powerful CEO and his new assistant escalates into a passionate affair.",
+    "status": "PUBLISHED",
+    "trope": "Office romance",
+    "book_slug": "forbidden-desires",
+    "chapters": [
+      {
+        "id": "chap-26-1",
+        "chapter_number": 1,
+        "title": "The New Assistant",
+        "content_url": "/content/book-26/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-26-2",
+        "chapter_number": 2,
+        "title": "Office Tensions",
+        "content_url": "/content/book-26/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-26-3",
+        "chapter_number": 3,
+        "title": "After Hours",
+        "content_url": "/content/book-26/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-26-4",
+        "chapter_number": 4,
+        "title": "Passionate Affair",
+        "content_url": "/content/book-26/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-26-5",
+        "chapter_number": 5,
+        "title": "Forbidden Love",
+        "content_url": "/content/book-26/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1890
+  },
+  {
+    "id": "book-27",
+    "title": "Midnight Passion",
+    "author": "Luna Night",
+    "cover": "/images/sexy-girl.jpg",
+    "rating": 4.7,
+    "category_slug": "erotica",
+    "description": "A chance encounter at a masquerade ball leads to a night of forbidden passion.",
+    "status": "PUBLISHED",
+    "trope": "One night stand",
+    "book_slug": "midnight-passion",
+    "chapters": [
+      {
+        "id": "chap-27-1",
+        "chapter_number": 1,
+        "title": "The Masquerade",
+        "content_url": "/content/book-27/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-27-2",
+        "chapter_number": 2,
+        "title": "A Chance Encounter",
+        "content_url": "/content/book-27/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-27-3",
+        "chapter_number": 3,
+        "title": "Midnight Revelations",
+        "content_url": "/content/book-27/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-27-4",
+        "chapter_number": 4,
+        "title": "Forbidden Desires",
+        "content_url": "/content/book-27/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-27-5",
+        "chapter_number": 5,
+        "title": "The Morning After",
+        "content_url": "/content/book-27/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1678
+  },
+  {
+    "id": "book-28",
+    "title": "Secret Lover",
+    "author": "Damon Black",
+    "cover": "/images/sexy-girl.jpg",
+    "rating": 4.9,
+    "category_slug": "erotica",
+    "description": "She's his brother's fiancée, but their secret affair threatens to destroy everything.",
+    "status": "PUBLISHED",
+    "trope": "Forbidden love",
+    "book_slug": "secret-lover",
+    "chapters": [
+      {
+        "id": "chap-28-1",
+        "chapter_number": 1,
+        "title": "The Brother's Fiancée",
+        "content_url": "/content/book-28/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-28-2",
+        "chapter_number": 2,
+        "title": "Forbidden Attraction",
+        "content_url": "/content/book-28/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-28-3",
+        "chapter_number": 3,
+        "title": "Secret Meetings",
+        "content_url": "/content/book-28/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-28-4",
+        "chapter_number": 4,
+        "title": "The Affair Deepens",
+        "content_url": "/content/book-28/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-28-5",
+        "chapter_number": 5,
+        "title": "Explosive Consequences",
+        "content_url": "/content/book-28/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 2100
+  },
+  {
+    "id": "book-29",
+    "title": "Burning Desire",
+    "author": "Jade Fire",
+    "cover": "/images/sexy-girl.jpg",
+    "rating": 4.6,
+    "category_slug": "erotica",
+    "description": "A passionate romance between a firefighter and the woman he rescued from a burning building.",
+    "status": "PUBLISHED",
+    "trope": "Rescue romance",
+    "book_slug": "burning-desire",
+    "chapters": [
+      {
+        "id": "chap-29-1",
+        "chapter_number": 1,
+        "title": "The Rescue",
+        "content_url": "/content/book-29/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-29-2",
+        "chapter_number": 2,
+        "title": "Recovery",
+        "content_url": "/content/book-29/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-29-3",
+        "chapter_number": 3,
+        "title": "Growing Attraction",
+        "content_url": "/content/book-29/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-29-4",
+        "chapter_number": 4,
+        "title": "Passionate Flames",
+        "content_url": "/content/book-29/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-29-5",
+        "chapter_number": 5,
+        "title": "Burning Desire",
+        "content_url": "/content/book-29/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1543
+  },
+  {
+    "id": "book-30",
+    "title": "Seduction Game",
+    "author": "Victor Steele",
+    "cover": "/images/sexy-girl.jpg",
+    "rating": 4.8,
+    "category_slug": "erotica",
+    "description": "A high-stakes game of seduction between two rivals turns into a passionate affair.",
+    "status": "PUBLISHED",
+    "trope": "Enemies to lovers",
+    "book_slug": "seduction-game",
+    "chapters": [
+      {
+        "id": "chap-30-1",
+        "chapter_number": 1,
+        "title": "The Rivals",
+        "content_url": "/content/book-30/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-30-2",
+        "chapter_number": 2,
+        "title": "The Game Begins",
+        "content_url": "/content/book-30/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-30-3",
+        "chapter_number": 3,
+        "title": "Seduction Tactics",
+        "content_url": "/content/book-30/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-30-4",
+        "chapter_number": 4,
+        "title": "The Tables Turn",
+        "content_url": "/content/book-30/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-30-5",
+        "chapter_number": 5,
+        "title": "Game Over",
+        "content_url": "/content/book-30/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1789
+  },
+  {
+    "id": "book-31",
+    "title": "Love Unbound",
+    "author": "Alex Morgan",
+    "cover": "/images/red-roses.jpg",
+    "rating": 4.8,
+    "category_slug": "lgbtq",
+    "description": "Two men from different worlds find love in a small town that challenges their relationship.",
+    "status": "PUBLISHED",
+    "trope": "Small town romance",
+    "book_slug": "love-unbound",
+    "chapters": [
+      {
+        "id": "chap-31-1",
+        "chapter_number": 1,
+        "title": "Different Worlds",
+        "content_url": "/content/book-31/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-31-2",
+        "chapter_number": 2,
+        "title": "Small Town",
+        "content_url": "/content/book-31/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-31-3",
+        "chapter_number": 3,
+        "title": "Growing Feelings",
+        "content_url": "/content/book-31/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-31-4",
+        "chapter_number": 4,
+        "title": "Town Challenges",
+        "content_url": "/content/book-31/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-31-5",
+        "chapter_number": 5,
+        "title": "Love Unbound",
+        "content_url": "/content/book-31/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1890
+  },
+  {
+    "id": "book-32",
+    "title": "Rainbow Hearts",
+    "author": "Jamie Taylor",
+    "cover": "/images/red-roses.jpg",
+    "rating": 4.7,
+    "category_slug": "lgbtq",
+    "description": "A non-binary artist finds love with a genderqueer musician in the vibrant city of New York.",
+    "status": "PUBLISHED",
+    "trope": "Artistic souls",
+    "book_slug": "rainbow-hearts",
+    "chapters": [
+      {
+        "id": "chap-32-1",
+        "chapter_number": 1,
+        "title": "The Artist",
+        "content_url": "/content/book-32/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-32-2",
+        "chapter_number": 2,
+        "title": "The Musician",
+        "content_url": "/content/book-32/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-32-3",
+        "chapter_number": 3,
+        "title": "New York City",
+        "content_url": "/content/book-32/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-32-4",
+        "chapter_number": 4,
+        "title": "Artistic Souls",
+        "content_url": "/content/book-32/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-32-5",
+        "chapter_number": 5,
+        "title": "Rainbow Hearts",
+        "content_url": "/content/book-32/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1678
+  },
+  {
+    "id": "book-33",
+    "title": "Pride and Love",
+    "author": "Casey Reed",
+    "cover": "/images/red-roses.jpg",
+    "rating": 4.9,
+    "category_slug": "lgbtq",
+    "description": "During Pride Month, two women from rival LGBTQ+ organizations fall in love despite their differences.",
+    "status": "PUBLISHED",
+    "trope": "Enemies to lovers",
+    "book_slug": "pride-and-love",
+    "chapters": [
+      {
+        "id": "chap-33-1",
+        "chapter_number": 1,
+        "title": "Pride Month",
+        "content_url": "/content/book-33/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-33-2",
+        "chapter_number": 2,
+        "title": "Rival Organizations",
+        "content_url": "/content/book-33/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-33-3",
+        "chapter_number": 3,
+        "title": "Unexpected Attraction",
+        "content_url": "/content/book-33/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-33-4",
+        "chapter_number": 4,
+        "title": "Overcoming Differences",
+        "content_url": "/content/book-33/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-33-5",
+        "chapter_number": 5,
+        "title": "Pride and Love",
+        "content_url": "/content/book-33/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 2100
+  },
+  {
+    "id": "book-34",
+    "title": "Transcendent Love",
+    "author": "Taylor James",
+    "cover": "/images/red-roses.jpg",
+    "rating": 4.8,
+    "category_slug": "lgbtq",
+    "description": "A transgender woman finds acceptance and love with a supportive partner who sees her true self.",
+    "status": "PUBLISHED",
+    "trope": "Trans love story",
+    "book_slug": "transcendent-love",
+    "chapters": [
+      {
+        "id": "chap-34-1",
+        "chapter_number": 1,
+        "title": "The Journey",
+        "content_url": "/content/book-34/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-34-2",
+        "chapter_number": 2,
+        "title": "Finding Support",
+        "content_url": "/content/book-34/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-34-3",
+        "chapter_number": 3,
+        "title": "True Self",
+        "content_url": "/content/book-34/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-34-4",
+        "chapter_number": 4,
+        "title": "Acceptance",
+        "content_url": "/content/book-34/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-34-5",
+        "chapter_number": 5,
+        "title": "Transcendent Love",
+        "content_url": "/content/book-34/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1987
+  },
+  {
+    "id": "book-35",
+    "title": "Queer Hearts",
+    "author": "Riley Chen",
+    "cover": "/images/red-roses.jpg",
+    "rating": 4.7,
+    "category_slug": "lgbtq",
+    "description": "A polyamorous relationship explores love, trust, and boundaries in a modern romance.",
+    "status": "PUBLISHED",
+    "trope": "Polyamory",
+    "book_slug": "queer-hearts",
+    "chapters": [
+      {
+        "id": "chap-35-1",
+        "chapter_number": 1,
+        "title": "Modern Romance",
+        "content_url": "/content/book-35/chapter-1.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "8 mins",
+        "word_count": 2000,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-35-2",
+        "chapter_number": 2,
+        "title": "Polyamorous Beginnings",
+        "content_url": "/content/book-35/chapter-2.md",
+        "is_locked": false,
+        "coin_cost": 0,
+        "read_time": "10 mins",
+        "word_count": 2500,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-35-3",
+        "chapter_number": 3,
+        "title": "Building Trust",
+        "content_url": "/content/book-35/chapter-3.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "9 mins",
+        "word_count": 2300,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-35-4",
+        "chapter_number": 4,
+        "title": "Navigating Boundaries",
+        "content_url": "/content/book-35/chapter-4.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "11 mins",
+        "word_count": 2700,
+        "created_at": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "chap-35-5",
+        "chapter_number": 5,
+        "title": "Queer Hearts",
+        "content_url": "/content/book-35/chapter-5.md",
+        "is_locked": true,
+        "coin_cost": 50,
+        "read_time": "12 mins",
+        "word_count": 2900,
+        "created_at": "2024-08-25T10:00:00Z"
+      }
+    ],
+    "saves": 1765
+  }
+]
