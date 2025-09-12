@@ -151,8 +151,10 @@ const readerItems = [
 
 const authorItems = [
     { title: 'Overview', href: '/dashboard/overview', icon: LayoutDashboardIcon },
-    { title: 'My Books', href: '/author/books', icon: LibraryIcon },
-    { title: 'Settings', href: '/author/settings', icon: SettingsIcon }
+    { title: 'Library', href: '/dashboard/library', icon: LibraryIcon },
+    { title: 'Favorites', href: '/dashboard/favorites', icon: HeartIcon },
+    { title: 'My Books', href: '/dashboard/my-books', icon: BookIcon },
+
 ]
 
 const adminItems = [

@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 definePageMeta({
-    layout: 'dash-layout'
+    layout: 'dash-my-books-layout'
 })
 </script>
 
 <template>
-    <h1>Library</h1>
+    <div>
+        <h1>All Books</h1>
+    </div>
 </template>
 
 <style lang="postcss" scoped>
