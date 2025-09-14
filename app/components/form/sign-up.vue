@@ -49,20 +49,13 @@ const handleSignUp = async (e: Event) => {
             password: password.value,
             options: {
                 emailRedirectTo: `${origin}/dashboard`,
+                data: {
+                    username: username.value.toLowerCase().trim()
+                }
             },
         })
 
         if (authError) throw authError
-
-        // Insert the username into the 'profiles' table
-        const { error: insertError } = await client
-            .from('profiles')
-            .insert([{
-                id: data.user?.id,
-                username: username.value.toLowerCase().trim()
-            }])
-
-        if (insertError) throw insertError
 
         // Redirect to success page
         await router.push('/auth/sign-up-success')

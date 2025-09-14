@@ -1,4 +1,4 @@
-<!-- pages/dashboard/edit/[slug]-add-chapter.vue -->
+<!-- pages/dashboard/edit/[slug]/add-chapter.vue -->
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
@@ -18,7 +18,7 @@ import { ArrowLeft, FileText, Clock } from 'lucide-vue-next'
 
 const route = useRoute()
 const router = useRouter()
-const slug = route.params.slug as string  // This will now correctly get just the book slug
+const slug = route.params.slug as string
 
 // Get book data
 const { book, pending: bookLoading, error: bookError } = useBook(slug)
@@ -48,6 +48,7 @@ const isFormValid = computed(() => {
 const updateWordCount = () => {
     const text = formData.value.content.trim()
     wordCount.value = text ? text.split(/\s+/).filter(word => word.length > 0).length : 0
+
     // Calculate reading time (200 words per minute)
     const minutes = Math.ceil(wordCount.value / 200)
     readingTime.value = minutes > 0 ? `${minutes} min read` : '< 1 min read'
@@ -56,9 +57,6 @@ const updateWordCount = () => {
 // Handle form submission
 const handleSubmit = async () => {
     if (!isFormValid.value || isSubmitting.value) return
-
-    console.log('Submitting chapter for book:', slug)  // Debug log
-    console.log('Form data:', formData.value)      // Debug log
 
     isSubmitting.value = true
 

@@ -1,41 +1,56 @@
+// composables/useChapters.ts
 import { useAsyncData } from '#app'
-import { toValue } from 'vue'
-import type { MaybeRefOrGetter } from 'vue'
 import type { Database } from '~/types/database.types'
 
 type Chapter = Database['public']['Tables']['chapters']['Row']
 
-export const useChapters = (slug: MaybeRefOrGetter<string>) => {
-  return useAsyncData<Chapter[]>(
-    () => `chapters-${toValue(slug)}`,
+export const useChapters = (bookSlug: string) => {
+  console.log('🔍 useChapters called with bookSlug:', bookSlug)
+  
+  const asyncData = useAsyncData(
+    `chapters-${bookSlug}`,
     async () => {
-      const slugValue = toValue(slug)
-      if (!slugValue) return []
-
+      console.log('🚀 Fetching chapters for book:', bookSlug)
+      
+      if (!bookSlug) {
+        console.warn('⚠️ Book slug is empty, returning empty array')
+        return []
+      }
+      
       try {
-        const data = await $fetch<Chapter[]>(`/api/authors/${slugValue}/chapters`)
-        return data
+        const response = await $fetch<{ chapters: Chapter[] }>(`/api/books/authors/${bookSlug}/chapters`)
+        console.log('✅ Successfully fetched chapters:', response.chapters)
+        return response.chapters
       } catch (err: unknown) {
-        // 1. Check if it's an instance of Error
+        console.error('❌ Error fetching chapters:', err)
+        
+        // Handle Error instances
         if (err instanceof Error) {
-          if (err.message.includes('404')) return []
-          throw err
+          throw new Error(`Failed to fetch chapters: ${err.message}`)
         }
-
-        // 2. Check if it's an object with status/message
+        
+        // Handle object-like errors
         if (err !== null && typeof err === 'object') {
           const errorObj = err as Record<string, unknown>
-          const statusCode = typeof errorObj.statusCode === 'number' ? errorObj.statusCode : 500
-          const statusMessage = typeof errorObj.statusMessage === 'string' ? errorObj.statusMessage : 'Unknown error'
-
-          if (statusCode === 404) return []
-          throw new Error(`${statusCode}: ${statusMessage}`)
+          const message = typeof errorObj.message === 'string' ? errorObj.message : 'Unknown error'
+          const code = typeof errorObj.code === 'string' ? errorObj.code : 'INTERNAL_ERROR'
+          throw new Error(`${code}: ${message}`)
         }
-
-        // 3. Fallback for primitives
+        
+        // Fallback for non-object errors
         throw new Error(`Unexpected error: ${String(err)}`)
       }
     },
-    { server: true }
+    {
+      server: false,
+      default: () => [],
+    }
   )
+  
+  return {
+    chapters: asyncData.data,
+    pending: asyncData.pending,
+    error: asyncData.error,
+    refresh: asyncData.refresh
+  }
 }

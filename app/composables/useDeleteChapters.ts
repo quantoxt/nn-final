@@ -1,44 +1,39 @@
-// composables/useReorderChapters.ts
+// composables/useDeleteChapters.ts
 import { ref } from 'vue'
 
-interface ChapterOrder {
-  id: string
-  chapter_number: number
-}
-
-export const useReorderChapters = () => {
+export const useDeleteChapters = () => {
   const loading = ref(false)
   const error = ref<string | null>(null)
   
-  const reorderChapters = async (bookSlug: string, chapterOrders: ChapterOrder[]) => {
+  const deleteChapters = async (bookSlug: string, chapterIds: string[]) => {
     if (!bookSlug) {
       error.value = 'Book slug is required'
       return { success: false, message: 'Book slug is required' }
     }
     
-    if (!Array.isArray(chapterOrders) || chapterOrders.length === 0) {
-      error.value = 'Chapter orders must be a non-empty array'
-      return { success: false, message: 'Chapter orders must be a non-empty array' }
+    if (!Array.isArray(chapterIds) || chapterIds.length === 0) {
+      error.value = 'Chapter IDs must be a non-empty array'
+      return { success: false, message: 'Chapter IDs must be a non-empty array' }
     }
     
     loading.value = true
     error.value = null
     
     try {
-      console.log('🚀 Reordering chapters for book:', bookSlug, 'with orders:', chapterOrders)
+      console.log('🚀 Deleting chapters for book:', bookSlug, 'chapter IDs:', chapterIds)
       const response = await $fetch<{ message: string }>(
-        `/api/books/authors/${bookSlug}/chapters/reorder`,
+        `/api/books/authors/${bookSlug}/chapters`,
         {
-          method: 'PUT',
-          body: { chapterOrders }
+          method: 'DELETE',
+          body: { chapterIds }
         }
       )
       
-      console.log('✅ Successfully reordered chapters:', response.message)
+      console.log('✅ Successfully deleted chapters:', response.message)
       
       return { success: true, message: response.message }
     } catch (err: unknown) {
-      console.error('❌ Error reordering chapters:', err)
+      console.error('❌ Error deleting chapters:', err)
       
       // Handle Error instances
       if (err instanceof Error) {
@@ -67,6 +62,6 @@ export const useReorderChapters = () => {
   return {
     loading,
     error,
-    reorderChapters
+    deleteChapters
   }
 }
