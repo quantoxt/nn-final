@@ -2,11 +2,15 @@
 definePageMeta({
     layout: 'dash-layout'
 })
+const status = ref('published')
+const { books } = useUserBooks(status);
 </script>
 
 <template>
     <div>
-        <h1>Overview</h1>
+        <role-author-only>
+            {{ books.length }} {{ books.length === 1 ? 'Book' : 'Books' }} Published
+        </role-author-only>
     </div>
 </template>
 

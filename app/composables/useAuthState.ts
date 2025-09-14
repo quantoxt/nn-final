@@ -1,7 +1,6 @@
 import { ref, computed, watch } from 'vue'
 import type { Database } from '~/types/database.types'
 type Profile = Database['public']['Tables']['profiles']['Row']
-
 export const useAuthState = () => {
   const user = useSupabaseUser()
   const client = useSupabaseClient<Database>()

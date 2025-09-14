@@ -18,9 +18,7 @@ export type Database = {
         Row: {
           author_id: string
           bookshelves_book_id: string | null
-          category_id: string
           category_slug: string | null
-          chapter_price: number | null
           cover_image_url: string | null
           created_at: string
           description: string | null
@@ -30,18 +28,16 @@ export type Database = {
           rating: number
           reading_sessions_book_id: string | null
           saves: number | null
-          slug: string
+          slug: string | null
           status: Database["public"]["Enums"]["book_status"]
           title: string
-          trope: string | null
+          trope: string[] | null
           updated_at: string
         }
         Insert: {
           author_id?: string
           bookshelves_book_id?: string | null
-          category_id: string
           category_slug?: string | null
-          chapter_price?: number | null
           cover_image_url?: string | null
           created_at?: string
           description?: string | null
@@ -51,18 +47,16 @@ export type Database = {
           rating?: number
           reading_sessions_book_id?: string | null
           saves?: number | null
-          slug: string
+          slug?: string | null
           status?: Database["public"]["Enums"]["book_status"]
           title: string
-          trope?: string | null
+          trope?: string[] | null
           updated_at?: string
         }
         Update: {
           author_id?: string
           bookshelves_book_id?: string | null
-          category_id?: string
           category_slug?: string | null
-          chapter_price?: number | null
           cover_image_url?: string | null
           created_at?: string
           description?: string | null
@@ -72,10 +66,10 @@ export type Database = {
           rating?: number
           reading_sessions_book_id?: string | null
           saves?: number | null
-          slug?: string
+          slug?: string | null
           status?: Database["public"]["Enums"]["book_status"]
           title?: string
-          trope?: string | null
+          trope?: string[] | null
           updated_at?: string
         }
         Relationships: [
@@ -84,13 +78,6 @@ export type Database = {
             columns: ["author_id"]
             isOneToOne: false
             referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "books_category_id_fkey"
-            columns: ["category_id"]
-            isOneToOne: false
-            referencedRelation: "categories"
             referencedColumns: ["id"]
           },
           {
@@ -175,37 +162,37 @@ export type Database = {
         Row: {
           book_id: string
           chapter_number: number
-          coin_cost: number
-          content_url: string
+          chapter_title: string
+          coin_cost: number | null
+          content: string
           created_at: string
           id: string
           is_locked: boolean
           reading_sessions_chapter_id: string | null
-          title: string
           updated_at: string
         }
         Insert: {
-          book_id: string
+          book_id?: string
           chapter_number: number
-          coin_cost?: number
-          content_url: string
+          chapter_title: string
+          coin_cost?: number | null
+          content: string
           created_at?: string
           id?: string
           is_locked?: boolean
           reading_sessions_chapter_id?: string | null
-          title: string
           updated_at?: string
         }
         Update: {
           book_id?: string
           chapter_number?: number
-          coin_cost?: number
-          content_url?: string
+          chapter_title?: string
+          coin_cost?: number | null
+          content?: string
           created_at?: string
           id?: string
           is_locked?: boolean
           reading_sessions_chapter_id?: string | null
-          title?: string
           updated_at?: string
         }
         Relationships: [

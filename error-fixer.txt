@@ -1,0 +1,7 @@
+   1. Avoid `any`: Do not use catch (err: any). The purpose of this task is to correctly handle unknown.
+   2. Prioritize `instanceof Error`: The most common and reliable check is to see if the thrown object is an instance of the standard
+      Error class.
+   3. Handle Object-Like Errors: Sometimes, libraries or APIs throw objects that are not true Error instances but still contain
+      valuable information like message or code. You should check for these structures.
+   4. Provide a Fallback: Always include a fallback to handle cases where the thrown value is not an object or Error instance (e.g., a
+      string or number was thrown).

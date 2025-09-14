@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
     middleware: 'auth',
-    layout: 'dash-my-books-layout'
+    layout: 'dash-layout'
 })
 onMounted(() => {
     navigateTo('/dashboard/my-books/all')

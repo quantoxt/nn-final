@@ -16,8 +16,10 @@
 import {
     Hourglass,
     BookOpenText,
+    PenIcon,
     X,
-    PartyPopper
+    PartyPopper,
+    CircleFadingPlus
 } from 'lucide-vue-next'
 
 // Define dynamic tabs
@@ -25,7 +27,9 @@ const links = [
     { label: 'All', href: '/dashboard/my-books/all', icon: BookOpenText },
     { label: 'Published', href: '/dashboard/my-books/published', icon: PartyPopper },
     { label: 'Pending', href: '/dashboard/my-books/pending', icon: Hourglass },
+    { label: 'Drafts', href: '/dashboard/my-books/drafts', icon: PenIcon },
     { label: 'Rejected', href: '/dashboard/my-books/rejected', icon: X },
+    {label: 'Add New Book', href:'/dashboard/my-books/new-book', icon: CircleFadingPlus}
 
 ]
 </script>
@@ -34,6 +38,6 @@ const links = [
 @reference "tailwindcss";
 
 .navbar-link.router-link-active {
-    @apply bg-rose-50 text-rose-500 font-semibold;
+    @apply bg-red-50 text-red-500 font-semibold;
 }
 </style>

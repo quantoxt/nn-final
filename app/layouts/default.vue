@@ -3,9 +3,10 @@
 </script>
 
 <template>
-    <main class="dark">
+    <main>
+        <misc-navbar/>
         <slot />
-        <misc-footer/>
+        <!-- <misc-footer/> -->
     </main>
 </template>
 

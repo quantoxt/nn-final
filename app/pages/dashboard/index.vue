@@ -6,4 +6,6 @@ definePageMeta({
 onMounted(() => {
     navigateTo('/dashboard/overview')
 })
+const { user } = useAuthState()
+console.log('User:', user.value)
 </script>

@@ -1,12 +1,16 @@
 <script lang="ts" setup>
 definePageMeta({
-    layout: 'dash-settings-layout'
+    layout: 'dash-layout'
 })
 </script>
 
 <template>
     <div>
-        <h1>Account</h1>
+        <misc-dashboard-settings-navbar>
+            <template #navbar />
+        </misc-dashboard-settings-navbar>
+
+        <h1>Account Settings</h1>
     </div>
 </template>
 

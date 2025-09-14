@@ -6,10 +6,8 @@ definePageMeta({
 
 <template>
     <div>
-        <h2>Favorites</h2>
+        <h2>Coin Management</h2>
     </div>
 </template>
 
-<style lang="postcss" scoped>
-    
-</style>
+<style lang="postcss" scoped></style>

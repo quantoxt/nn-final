@@ -4,7 +4,7 @@ const { getBooks,/*  error, isLoading: loading */ } = useBooks()
 const books = getBooks({
     status: 'published',
     limit: 6,
-    category: 'LGBTQ+'
+    category: 'lgbtq'
 })
 </script>
 

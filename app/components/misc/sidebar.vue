@@ -14,7 +14,7 @@
             <SidebarTrigger />
         </SidebarHeader>
 
-        <SidebarContent class="px-2 py-4">
+        <SidebarContent class="ps-0 pe-2 py-4">
 
             <!-- Reader Menu -->
             <RoleReaderOnly>
@@ -118,8 +118,8 @@ import {
     LibraryIcon,
     UsersIcon,
     SettingsIcon,
-/*     UserIcon,
- */    LayoutDashboardIcon
+    LayoutDashboardIcon,
+    Coins
 } from 'lucide-vue-next'
 
 import { watch } from 'vue'
@@ -134,7 +134,7 @@ watch(
     () => route.path,
     () => {
         if (import.meta.client && window.innerWidth < 768) {
-            toggleSidebar(false)
+            toggleSidebar()
         }
     }
 )
@@ -152,7 +152,7 @@ const readerItems = [
 const authorItems = [
     { title: 'Overview', href: '/dashboard/overview', icon: LayoutDashboardIcon },
     { title: 'Library', href: '/dashboard/library', icon: LibraryIcon },
-    { title: 'Favorites', href: '/dashboard/favorites', icon: HeartIcon },
+    { title: 'Coins Management', href: '/dashboard/coins-management', icon: Coins },
     { title: 'My Books', href: '/dashboard/my-books', icon: BookIcon },
 
 ]

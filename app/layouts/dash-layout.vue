@@ -1,10 +1,13 @@
-<!-- layouts/default.vue -->
+<!-- layouts/dashboard.vue -->
 <template>
     <SidebarProvider>
         <div class="flex">
             <misc-sidebar />
             <SidebarInset>
-                <main class="flex-1">
+                <slot name="navbar" />
+
+                <!-- 👇 Page Content -->
+                <main class="flex-1 p-4">
                     <slot />
                 </main>
             </SidebarInset>
@@ -14,4 +17,5 @@
 
 <script setup>
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
+
 </script>

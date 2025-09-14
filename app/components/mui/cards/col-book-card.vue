@@ -10,7 +10,7 @@
             <!-- Author -->
             <p class="text-sm text-gray-600 mt-1">{{ author }}</p>
             <!-- Genre Tags -->
-            <div class="flex flex-wrap gap-1 mt-1">
+            <div v-for="trope in props.tropes" v-bind:key="trope" class="flex flex-wrap gap-1 mt-1">
                 <span class="text-xs px-2 py-0.5 bg-pink-100 text-pink-700 rounded">
                     {{ trope }}
                 </span>
@@ -34,7 +34,7 @@ const props = defineProps<{
     title: string
     cover: string
     author: string
-    trope: string
+    tropes: string[]
     rating: number
     saves: number | string
     bookSlug: string

@@ -7,25 +7,24 @@ type Book = Database['public']['Tables']['books']['Row']
 export function useSingleBook() {
   const route = useRoute()
 
-  const categorySlug = computed(() => route.params.book as string)
   const bookSlug = computed(() => route.params.slug as string)
+  const categorySlug = computed(() => route.params.book as string)
 
   const { data, pending, error } = useFetch<Book>(
-    () => `/api/books/slug/${bookSlug.value}?category=${categorySlug.value}`,
+    () => `/api/books/${bookSlug.value}/get?category=${categorySlug.value}`,
     {
-      immediate: !!categorySlug.value && !!bookSlug.value,
+      immediate: !!bookSlug.value && !!categorySlug.value,
     }
   )
 
   const isValidRoute = computed(() => {
-    return !!categorySlug.value && !!bookSlug.value
+    return !!bookSlug.value && !!categorySlug.value
   })
 
   return {
     book: data,
     loading: pending,
     error,
-    categorySlug,
     bookSlug,
     isValidRoute,
   }
