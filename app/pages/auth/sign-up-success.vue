@@ -31,12 +31,5 @@ definePageMeta({
                 </Card>
             </div>
         </div>
-        <div>
-            <nuxt-link to="/">
-                <button class="px-4 py-1 font-semibold text-sm">
-                    <ArrowLeft class="size-4" /> Back Home
-                </button>
-            </nuxt-link>
-        </div>
     </div>
 </template>
