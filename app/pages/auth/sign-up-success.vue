@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowLeft } from 'lucide-vue-next';
+import { MailIcon  } from 'lucide-vue-next';
 import {
     Card,
     CardContent,
@@ -29,12 +29,14 @@ definePageMeta({
                         </p>
                     </CardContent>
                 </Card>
-            </div>
-            <div class="flex items-center justify-center">
-                <nuxt-link to="/" class="inline-flex items-center justify-center">
-                    <ArrowLeft class="size-5 text-white" /> <button
-                        class="px-4 py-1 font-semibold text-sm text-center bg-white border rounded-full inline-flex item-center justify-center my-2">Home</button>
-                </nuxt-link>
+                <div class="flex items-center justify-center">
+                    <nuxt-link to="https://mail.google.com" class="inline-flex items-center justify-center">
+                        <MailIcon class="size-5 text-white" />
+                        <button
+                            class="px-4 py-1 font-semibold text-sm text-center bg-white border rounded-full inline-flex item-center justify-center my-2">Open
+                            Mail</button>
+                    </nuxt-link>
+                </div>
             </div>
         </div>
     </div>
