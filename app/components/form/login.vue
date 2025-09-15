@@ -54,7 +54,7 @@ const handleLogin = async (e: Event) => {
     <div :class="['flex flex-col gap-6', props.class]">
         <Card>
             <CardHeader>
-                <CardTitle class="text-2xl">Login</CardTitle>
+                <CardTitle class="text-2xl card-title">Login</CardTitle>
                 <CardDescription>
                     Enter your email below to login to your account
                 </CardDescription>
@@ -63,12 +63,12 @@ const handleLogin = async (e: Event) => {
                 <form @submit="handleLogin">
                     <div class="flex flex-col gap-6">
                         <div class="grid gap-2">
-                            <Label for="email">Email</Label>
-                            <Input id="email" v-model="email" type="email" placeholder="someone@example.com" required  />
+                            <Label for="email" class="label">Email</Label>
+                            <Input id="email" v-model="email" type="email" placeholder="zara@example.com" required  />
                         </div>
                         <div class="grid gap-2">
                             <div class="flex items-center">
-                                <Label for="password">Password</Label>
+                                <Label for="password" class="label">Password</Label>
                                 <NuxtLink 
                                 to="/auth/forgot-password"
                                     class="ml-auto inline-block text-sm underline-offset-4 hover:underline">
@@ -80,7 +80,7 @@ const handleLogin = async (e: Event) => {
                         <div v-if="error" class="text-sm text-red-500">
                             {{ error }}
                         </div>
-                        <Button type="submit" class="w-full" :disabled="isLoading">
+                        <Button type="submit" class="w-full button" :disabled="isLoading">
                             {{ isLoading ? 'Going in...' : 'Login' }}
                         </Button>
                     </div>

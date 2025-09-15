@@ -53,7 +53,7 @@ const handleForgotPassword = async (e: Event) => {
     <div :class="['flex flex-col gap-6', props.class]">
         <Card v-if="success">
             <CardHeader>
-                <CardTitle class="text-2xl">Check Your Email</CardTitle>
+                <CardTitle class="text-2xl card-title">Check Your Email</CardTitle>
                 <CardDescription>Password reset instructions sent</CardDescription>
             </CardHeader>
             <CardContent>
@@ -66,7 +66,7 @@ const handleForgotPassword = async (e: Event) => {
 
         <Card v-else>
             <CardHeader>
-                <CardTitle class="text-2xl">Reset Your Password</CardTitle>
+                <CardTitle class="text-2xl card-title">Reset Your Password</CardTitle>
                 <CardDescription>
                     Type in your email and we&apos;ll send you a link to reset your password
                 </CardDescription>
@@ -75,13 +75,13 @@ const handleForgotPassword = async (e: Event) => {
                 <form @submit="handleForgotPassword">
                     <div class="flex flex-col gap-6">
                         <div class="grid gap-2">
-                            <Label for="email">Email</Label>
+                            <Label for="email" class="label">Email</Label>
                             <Input id="email" v-model="email" type="email" placeholder="m@example.com" required  />
                         </div>
                         <div v-if="error" class="text-sm text-red-500">
                             {{ error }}
                         </div>
-                        <Button type="submit" class="w-full" :disabled="isLoading">
+                        <Button type="submit" class="w-full button" :disabled="isLoading">
                             {{ isLoading ? 'Sending...' : 'Send reset email' }}
                         </Button>
                     </div>

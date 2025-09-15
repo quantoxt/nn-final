@@ -3,5 +3,6 @@
         "supabase",
         "nuxt",
         "lucide"
-    ]
+    ],
+    "postman.settings.dotenv-detection-notification-visibility": false
 }

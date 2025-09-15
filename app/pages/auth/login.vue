@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
     middleware: "auth",
+    layout: 'auth-layout'
 })
 </script>
 
@@ -12,4 +13,6 @@ definePageMeta({
     </div>
 </template>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+
+</style>

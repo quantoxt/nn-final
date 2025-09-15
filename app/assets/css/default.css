@@ -68,3 +68,20 @@ section.shade {
 .animate-float {
   animation: float 15s linear infinite;
 }
+
+.auth-layout .card-title {
+    color: var(--color-primary);
+}
+
+.auth-layout .button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.auth-layout .button:hover {
+    background-color: var(--color-secondary);
+}
+
+.auth-layout .label {
+    color: var(--color-dark);
+}

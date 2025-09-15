@@ -52,20 +52,20 @@ const handleUpdatePassword = async (e: Event) => {
     <div :class="['flex flex-col gap-6', props.class]">
         <Card>
             <CardHeader>
-                <CardTitle class="text-2xl">Reset Your Password</CardTitle>
+                <CardTitle class="text-2xl card-title">Reset Your Password</CardTitle>
                 <CardDescription>Please enter your new password below.</CardDescription>
             </CardHeader>
             <CardContent>
                 <form @submit="handleUpdatePassword">
                     <div class="flex flex-col gap-6">
                         <div class="grid gap-2">
-                            <Label for="password">New password</Label>
+                            <Label for="password" class="label">New password</Label>
                             <Input id="password" v-model="password" type="password" placeholder="New password" required/>
                         </div>
                         <div v-if="error" class="text-sm text-red-500">
                             {{ error }}
                         </div>
-                        <Button type="submit" class="w-full" :disabled="isLoading">
+                        <Button type="submit" class="w-full button" :disabled="isLoading">
                             {{ isLoading ? 'Saving...' : 'Save new password' }}
                         </Button>
                     </div>

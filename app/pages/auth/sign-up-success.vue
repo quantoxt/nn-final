@@ -7,7 +7,8 @@ import {
     CardTitle,
 } from '~/components/ui/card'
 definePageMeta({
-    middleware: 'auth'
+    middleware: 'auth',
+    layout: 'auth-layout'
 })
 </script>
 
@@ -17,7 +18,7 @@ definePageMeta({
             <div class="flex flex-col gap-6">
                 <Card>
                     <CardHeader>
-                        <CardTitle class="text-2xl">Thank you for signing up!</CardTitle>
+                        <CardTitle class="text-2xl card-title">Thank you for signing up!</CardTitle>
                         <CardDescription>Check your email to confirm</CardDescription>
                     </CardHeader>
                     <CardContent>

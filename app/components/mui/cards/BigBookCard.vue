@@ -11,7 +11,7 @@
           <span class="category">
             <nuxt-link :to="`/category/${props.category}`">{{
               props.category
-            }}</nuxt-link>
+}}</nuxt-link>
           </span>
         </div>
         <div class="language">Language: English</div>

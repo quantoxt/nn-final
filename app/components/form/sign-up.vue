@@ -43,16 +43,18 @@ const handleSignUp = async (e: Event) => {
     }
 
     try {
+        const options = {
+            emailRedirectTo: `${origin}/dashboard`,
+            data: {
+                username: username.value.toLowerCase().trim()
+            }
+        };
+
         // Sign up the user
         const { data, error: authError } = await client.auth.signUp({
             email: email.value,
             password: password.value,
-            options: {
-                emailRedirectTo: `${origin}/dashboard`,
-                data: {
-                    username: username.value.toLowerCase().trim()
-                }
-            },
+            options,
         })
 
         if (authError) throw authError
@@ -71,36 +73,36 @@ const handleSignUp = async (e: Event) => {
     <div :class="['flex flex-col gap-6', props.class]">
         <Card>
             <CardHeader>
-                <CardTitle class="text-2xl">Sign up</CardTitle>
-                <CardDescription>Create a new account</CardDescription>
+                <CardTitle class="text-2xl card-title">Sign up</CardTitle>
+                <CardDescription>Create a new account and start reading books!</CardDescription>
             </CardHeader>
             <CardContent>
                 <form @submit="handleSignUp">
                     <div class="flex flex-col gap-6">
                         <div class="grid gap-2">
-                            <Label for="email">Email</Label>
-                            <Input id="email" v-model="email" type="email" placeholder="reader@example.com" required  />
+                            <Label for="email" class="label">Email</Label>
+                            <Input id="email" v-model="email" type="email" placeholder="quantoxt@example.com" required  />
                         </div>
                         <div class="grid gap-2">
-                            <Label for="username">Username</Label>
-                            <Input id="username" v-model="username" type="text" placeholder="zara_leo" required  />
+                            <Label for="username" class="label">Username</Label>
+                            <Input id="username" v-model="username" type="text" placeholder="troy_tasuki" required  />
                         </div>
                         <div class="grid gap-2">
                             <div class="flex items-center">
-                                <Label for="password">Password</Label>
+                                <Label for="password" class="label">Password</Label>
                             </div>
                             <Input id="password" v-model="password" type="password" required  />
                         </div>
                         <div class="grid gap-2">
                             <div class="flex items-center">
-                                <Label for="repeat-password">Repeat Password</Label>
+                                <Label for="repeat-password" class="label">Repeat Password</Label>
                             </div>
                             <Input id="repeat-password" v-model="repeatPassword" type="password" required  />
                         </div>
                         <div v-if="error" class="text-sm text-red-500">
                             {{ error }}
                         </div>
-                        <Button type="submit" class="w-full" :disabled="isLoading">
+                        <Button type="submit" class="w-full button" :disabled="isLoading">
                             {{ isLoading ? 'Creating an account...' : 'Sign up' }}
                         </Button>
                     </div>
