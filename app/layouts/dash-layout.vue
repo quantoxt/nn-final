@@ -17,5 +17,7 @@
 
 <script setup>
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
-
+definePageMeta({
+    middleware: 'auth'
+})
 </script>
