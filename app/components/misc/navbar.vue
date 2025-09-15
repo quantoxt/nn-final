@@ -109,8 +109,8 @@
                                     <NuxtLink :to="isAuthenticated ? '/dashboard' : '/auth/login'"
                                         class="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
                                         @click="isOpen = false">
-                                        <LogIn v-if="isAuthenticated" class="size-4" />
-                                        <LayoutDashboard v-else-if="!isAuthenticated" class="size-4" />
+                                        <LayoutDashboard v-if="isAuthenticated" class="size-4" />
+                                        <Login v-else-if="!isAuthenticated" class="size-4" />
                                         <span>{{ isAuthenticated ? "Dashboard" : "Login" }}</span>
                                     </NuxtLink>
                                     <NuxtLink :to="isAuthenticated ? '/coins-shop' : '/auth/sign-up'"
