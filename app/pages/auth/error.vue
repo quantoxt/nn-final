@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ArrowLeft } from 'lucide-vue-next'
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card'
 
 const route = useRoute()
@@ -22,6 +23,13 @@ definePageMeta({
                     </CardContent>
                 </Card>
             </div>
+        </div>
+        <div>
+            <nuxt-link to="/">
+                <button class="px-4 py-1 font-semibold text-sm">
+                    <ArrowLeft class="size-4" /> Back Home
+                </button>
+            </nuxt-link>
         </div>
     </div>
 </template>

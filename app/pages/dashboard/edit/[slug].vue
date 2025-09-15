@@ -20,6 +20,10 @@ const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug as string  // This will now correctly get just the book slug
 
+definePageMeta({
+    layout: 'dash-layout',
+    middleware: 'auth',
+})
 // Get book data
 const { book, pending: bookLoading, error: bookError } = useBook(slug)
 

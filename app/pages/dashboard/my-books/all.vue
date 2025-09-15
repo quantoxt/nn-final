@@ -2,7 +2,8 @@
 import { ref } from 'vue' // 👈 was missing — required for `ref()`
 
 definePageMeta({
-    layout: 'dash-layout'
+    layout: 'dash-layout',
+    middleware: 'auth',
 })
 
 const coming_soon = () => {

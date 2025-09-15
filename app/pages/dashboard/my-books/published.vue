@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-    layout: 'dash-layout'
+    layout: 'dash-layout',
+    middleware: 'auth',
 })
 const status = ref('published')
 const limit = ref() // No Limit, fetch all Do not set to 0 or null

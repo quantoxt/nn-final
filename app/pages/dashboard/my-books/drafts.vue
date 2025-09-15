@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-    layout: 'dash-layout'
+    layout: 'dash-layout',
+    middleware: 'auth',
 })
 const status = ref('draft')
 const limit = ref()

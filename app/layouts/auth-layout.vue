@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { ArrowLeft } from 'lucide-vue-next';
+
+</script>
+
 <template>
     <main class="auth-layout">
         <slot />
