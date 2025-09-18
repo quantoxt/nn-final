@@ -4,12 +4,9 @@
 
 <template>
     <main>
-        <misc-navbar/>
+        <misc-navbar />
         <slot />
-        <!-- <misc-footer/> -->
     </main>
 </template>
 
-<style lang="postcss" scoped>
-    
-</style>
+<style lang="postcss" scoped></style>

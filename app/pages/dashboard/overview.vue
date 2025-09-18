@@ -11,6 +11,7 @@ const { isLoading, profile} = useAuthState()
 <template>
     <div>
         <h2 v-if="!isLoading">Hello {{ profile?.username }}</h2>
+        <p v-if="!isLoading"> {{ profile?.coin_balance }} {{ profile?.coin_balance > 1 ? "Coins" : "Coin" }} Left</p>
         <role-author-only>
             <p>You have {{ books.length }} {{ books.length === 1 ? 'Book' : 'Books' }} Published </p>
         </role-author-only>

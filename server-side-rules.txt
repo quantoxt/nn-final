@@ -1,0 +1,152 @@
+# Nuxt 3 Server-Side Route Best Practices
+
+This file outlines the best practices for creating server-side routes in Nuxt 3, with a focus on proper error handling and TypeScript type safety.
+
+## 1. Creating Server-Side Routes
+
+Nuxt 3 uses a file-based routing system for server-side routes, located in the `server/api/` directory.
+
+- A file named `server/api/hello.get.ts` will create a `GET` endpoint at `/api/hello`.
+- A file named `server/api/users/[id].post.ts` will create a `POST` endpoint that accepts a dynamic `id` parameter at `/api/users/:id`.
+
+### Basic Example
+
+Here's a basic example of a `GET` handler that fetches data from Supabase:
+
+```typescript
+// server/api/books/all.get.ts
+import { serverSupabaseClient } from '#supabase/server'
+import { Database } from '~/types/database.types' // Import your database types
+
+export default defineEventHandler(async (event) => {
+  const supabase = await serverSupabaseClient<Database>(event)
+
+  // Fetch data from Supabase
+  const { data, error } = await supabase.from('books').select('*')
+
+  // ... handle errors and return data
+})
+```
+
+## 2. Robust Error Handling
+
+Proper error handling is crucial for building reliable applications. Always wrap your database calls in a `try...catch` block and use Nuxt's `createError` utility to send meaningful error responses to the client.
+
+### Example with Error Handling
+
+```typescript
+// server/api/books/[slug].get.ts
+import { serverSupabaseClient } from '#supabase/server'
+import { Database } from '~/types/database.types'
+
+export default defineEventHandler(async (event) => {
+  const supabase = await serverSupabaseClient<Database>(event)
+  const slug = event.context.params?.slug
+
+  if (!slug) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Bad Request: Book slug is required',
+    })
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from('books')
+      .select('*')
+      .eq('slug', slug)
+      .single()
+
+    // Handle Supabase-specific errors
+    if (error) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: `Failed to fetch book: ${error.message}`,
+      })
+    }
+
+    // Handle the case where the book is not found
+    if (!data) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: 'Book not found',
+      })
+    }
+
+    return data
+  } catch (err) {
+    // Log the error for debugging purposes
+    console.error('Error in /api/books/[slug].get.ts:', err)
+
+    // Re-throw the error to be handled by Nuxt
+    throw err
+  }
+})
+```
+
+## 3. TypeScript Type Safety with `instanceof`
+
+When you fetch data from Supabase, TypeScript might warn you that the data can be `null` or an array, even when you expect a single object. You can use `instanceof` to narrow down the type and get rid of these warnings.
+
+However, a more common and often cleaner approach for Supabase is to check for the existence of the `data` object and handle the `null` case. When using `.single()`, Supabase returns a single object or `null`, not an array. When using `.select()` without `.single()`, it can return an array or `null`.
+
+### Example with Type Checking
+
+Here is a robust example that combines all the best practices:
+
+```typescript
+// server/api/category/[slug].get.ts
+import { serverSupabaseClient } from '#supabase/server'
+import { Database } from '~/types/database.types'
+
+export default defineEventHandler(async (event) => {
+  const supabase = await serverSupabaseClient<Database>(event)
+  const slug = event.context.params?.slug
+
+  if (!slug) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Bad Request: Category slug is required',
+    })
+  }
+
+  try {
+    const { data: category, error } = await supabase
+      .from('categories')
+      .select('*')
+      .eq('slug', slug)
+      .single()
+
+    if (error) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: `Failed to fetch category: ${error.message}`,
+      })
+    }
+
+    if (!category) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: 'Category not found',
+      })
+    }
+
+    // At this point, TypeScript knows that 'category' is not null.
+    // You can safely access its properties.
+    return category
+
+  } catch (err) {
+    console.error('Error in /api/category/[slug].get.ts:', err)
+
+    // If the error is already a Nuxt-compatible error, just re-throw it
+    if (err instanceof Error && 'statusCode' in err) {
+      throw err
+    }
+
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+    })
+  }
+})
+```

@@ -205,35 +205,100 @@ export type Database = {
           },
         ]
       }
-      coin_transactions: {
+      coin_packages: {
         Row: {
-          amount: number
-          created_at: string
+          coins_amount: number
+          created_at: string | null
+          currency: string
+          description: string | null
           id: string
-          related_entity_id: string | null
-          type: Database["public"]["Enums"]["transaction_type"] | null
-          user_id: string
+          is_active: boolean | null
+          name: string
+          price: number
+          provider_plan_code: string | null
         }
         Insert: {
-          amount: number
-          created_at?: string
+          coins_amount: number
+          created_at?: string | null
+          currency: string
+          description?: string | null
           id?: string
-          related_entity_id?: string | null
-          type?: Database["public"]["Enums"]["transaction_type"] | null
-          user_id?: string
+          is_active?: boolean | null
+          name: string
+          price: number
+          provider_plan_code?: string | null
         }
         Update: {
-          amount?: number
-          created_at?: string
+          coins_amount?: number
+          created_at?: string | null
+          currency?: string
+          description?: string | null
           id?: string
-          related_entity_id?: string | null
-          type?: Database["public"]["Enums"]["transaction_type"] | null
-          user_id?: string
+          is_active?: boolean | null
+          name?: string
+          price?: number
+          provider_plan_code?: string | null
+        }
+        Relationships: []
+      }
+      earnings_transactions: {
+        Row: {
+          author_id: string
+          chapter_id: string | null
+          coins_spent: number
+          commission_rate: number
+          created_at: string | null
+          gross_amount_usd: number
+          id: string
+          net_earning_usd: number
+          platform_fee_usd: number
+          reader_id: string
+          transaction_type: string
+        }
+        Insert: {
+          author_id: string
+          chapter_id?: string | null
+          coins_spent: number
+          commission_rate: number
+          created_at?: string | null
+          gross_amount_usd: number
+          id?: string
+          net_earning_usd: number
+          platform_fee_usd: number
+          reader_id: string
+          transaction_type?: string
+        }
+        Update: {
+          author_id?: string
+          chapter_id?: string | null
+          coins_spent?: number
+          commission_rate?: number
+          created_at?: string | null
+          gross_amount_usd?: number
+          id?: string
+          net_earning_usd?: number
+          platform_fee_usd?: number
+          reader_id?: string
+          transaction_type?: string
         }
         Relationships: [
           {
-            foreignKeyName: "coin_transactions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: "earnings_transactions_author_id_fkey"
+            columns: ["author_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "earnings_transactions_chapter_id_fkey"
+            columns: ["chapter_id"]
+            isOneToOne: false
+            referencedRelation: "chapters"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "earnings_transactions_reader_id_fkey"
+            columns: ["reader_id"]
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
@@ -281,6 +346,7 @@ export type Database = {
           bookshelves_user_id: string | null
           coin_balance: number
           created_at: string
+          earnings_balance: number
           id: string
           notifications_user_id: string | null
           reading_sessions_user_id: string | null
@@ -292,6 +358,7 @@ export type Database = {
           bookshelves_user_id?: string | null
           coin_balance?: number
           created_at?: string
+          earnings_balance?: number
           id?: string
           notifications_user_id?: string | null
           reading_sessions_user_id?: string | null
@@ -303,6 +370,7 @@ export type Database = {
           bookshelves_user_id?: string | null
           coin_balance?: number
           created_at?: string
+          earnings_balance?: number
           id?: string
           notifications_user_id?: string | null
           reading_sessions_user_id?: string | null
@@ -434,36 +502,69 @@ export type Database = {
           },
         ]
       }
-      user_chapter_unlocks: {
+      transactions: {
+        Row: {
+          amount: number
+          created_at: string | null
+          currency: string
+          id: string
+          provider: string | null
+          reference: string | null
+          status: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          amount: number
+          created_at?: string | null
+          currency: string
+          id?: string
+          provider?: string | null
+          reference?: string | null
+          status?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          amount?: number
+          created_at?: string | null
+          currency?: string
+          id?: string
+          provider?: string | null
+          reference?: string | null
+          status?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      unlocked_chapters: {
         Row: {
           chapter_id: string
-          id: string
-          unlocked_at: string
-          user_id: string
+          reader_id: string
+          unlocked_at: string | null
         }
         Insert: {
           chapter_id: string
-          id?: string
-          unlocked_at?: string
-          user_id: string
+          reader_id: string
+          unlocked_at?: string | null
         }
         Update: {
           chapter_id?: string
-          id?: string
-          unlocked_at?: string
-          user_id?: string
+          reader_id?: string
+          unlocked_at?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "user_chapter_unlocks_chapter_id_fkey"
+            foreignKeyName: "unlocked_chapters_chapter_id_fkey"
             columns: ["chapter_id"]
             isOneToOne: false
             referencedRelation: "chapters"
             referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "user_chapter_unlocks_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: "unlocked_chapters_reader_id_fkey"
+            columns: ["reader_id"]
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
@@ -475,9 +576,17 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      increment_coin_balance: {
+        Args: { coins_to_add: number; target_user_id: string }
+        Returns: undefined
+      }
       is_author_or_admin: {
         Args: { user_id: string }
         Returns: boolean
+      }
+      unlock_chapter_and_process_earnings: {
+        Args: { chapter_id_param: string; reader_id_param: string }
+        Returns: Json
       }
     }
     Enums: {

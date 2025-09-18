@@ -1,4 +1,3 @@
-<!-- pages/dashboard/edit/[slug]-add-chapter.vue -->
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
@@ -18,7 +17,7 @@ import { ArrowLeft, FileText, Clock } from 'lucide-vue-next'
 
 const route = useRoute()
 const router = useRouter()
-const slug = route.params.slug as string  // This will now correctly get just the book slug
+const slug = route.params.slug as string
 
 definePageMeta({
     layout: 'dash-layout',
@@ -48,10 +47,22 @@ const isFormValid = computed(() => {
     return formData.value.chapter_title.trim() && formData.value.content.trim()
 })
 
+// ✨ NEW: Computed property to calculate the next chapter number
+const nextChapterNumber = computed(() => {
+    if (book.value) {
+        // The next chapter is the current count + 1
+        return book.value.chapter_count + 1
+    }
+    // Default or loading state
+    return '...'
+})
+
+
 // Calculate word count and reading time
 const updateWordCount = () => {
     const text = formData.value.content.trim()
     wordCount.value = text ? text.split(/\s+/).filter(word => word.length > 0).length : 0
+
     // Calculate reading time (200 words per minute)
     const minutes = Math.ceil(wordCount.value / 200)
     readingTime.value = minutes > 0 ? `${minutes} min read` : '< 1 min read'
@@ -61,9 +72,6 @@ const updateWordCount = () => {
 const handleSubmit = async () => {
     if (!isFormValid.value || isSubmitting.value) return
 
-    console.log('Submitting chapter for book:', slug)  // Debug log
-    console.log('Form data:', formData.value)      // Debug log
-
     isSubmitting.value = true
 
     try {
@@ -71,8 +79,7 @@ const handleSubmit = async () => {
 
         if (result.success) {
             toast.success('Chapter created successfully!')
-            // Navigate back to book edit page
-            await router.push(`/dashboard/edit/${slug}`)
+            await router.push(`/dashboard/my-books/edit/${slug}`)
         } else {
             toast.error(result.message || 'Failed to create chapter')
         }
@@ -85,7 +92,7 @@ const handleSubmit = async () => {
 
 // Navigate back
 const handleGoBack = () => {
-    router.push(`/dashboard/edit/${slug}`)
+    router.push(`/dashboard/my-books/edit/${slug}`)
 }
 </script>
 
@@ -148,8 +155,12 @@ const handleGoBack = () => {
 
             <!-- Chapter form -->
             <Card>
-                <CardHeader>
+                <!-- ✨ UPDATED: Header now includes the chapter number -->
+                <CardHeader class="flex flex-row items-center justify-between">
                     <CardTitle>Chapter Details</CardTitle>
+                    <Badge v-if="book" variant="secondary">
+                        Chapter number: {{ nextChapterNumber }}
+                    </Badge>
                 </CardHeader>
                 <CardContent class="space-y-6">
                     <!-- Chapter title -->

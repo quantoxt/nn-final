@@ -2,7 +2,9 @@
     "cSpell.words": [
         "supabase",
         "nuxt",
-        "lucide"
+        "lucide",
+        "paystack",
+        "loca"
     ],
     "postman.settings.dotenv-detection-notification-visibility": false
 }

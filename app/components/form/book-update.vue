@@ -1,7 +1,6 @@
-<!-- components/BookMetadataForm.vue -->
 <script setup lang="ts">
 import type { Database } from '~/types/database.types'
-import { ref, computed, defineEmits, watch } from 'vue'
+import { ref, defineEmits, watch } from 'vue'
 // Import shadcn components
 import {
     Card,
@@ -28,9 +27,9 @@ type FormData = Omit<Book, 'id' | 'author_id' | 'created_at' | 'updated_at' | 'r
 
 // Props
 const props = defineProps<{
-    book: Ref<Book | null>
-    categories: Ref<Category[] | null>
-    loading: Ref<boolean>
+    book: Book | null
+    categories: Category[] | null
+    loading: boolean
 }>()
 
 // Emits
@@ -40,7 +39,7 @@ const emit = defineEmits<{
     (e: 'cover-uploaded', url: string): void
 }>()
 
-// Local reactive state for form data - this makes the form reactive
+// Local reactive state for form data
 const formData = ref<FormData>({
     title: '',
     description: '',
@@ -49,56 +48,44 @@ const formData = ref<FormData>({
     trope: '',
     status: 'draft',
     label: null,
-    slug: '', // Added slug field
+    slug: '',
 })
 
-// Static categories with the required slugs
-const staticCategories = ref([
-    { slug: 'billionaire', name: 'Billionaire' },
-    { slug: 'fantasy', name: 'Fantasy' },
-    { slug: 'erotica', name: 'Erotica' },
-    { slug: 'young-adult', name: 'Young Adult' },
-    { slug: 'werewolf', name: 'Werewolf' },
-    { slug: 'mafia', name: 'Mafia' },
-    { slug: 'lgbtq', name: 'LGBTQ' },
-])
-
-// Status options - only draft and pending_review
+// Status options
 const statusOptions = ['draft', 'pending_review'] as const
 
 // Sync with book prop when it changes
 watch(() => props.book, (newBook) => {
-    if (newBook && newBook.value) {
-        console.log('🔄 Pre-populating form with book data:', newBook.value)
+    if (newBook) {
+        console.log('🔄 Pre-populating form with book data:', newBook)
         formData.value = {
-            title: newBook.value.title,
-            description: newBook.value.description || '',
-            cover_image_url: newBook.value.cover_image_url || '',
-            category_slug: newBook.value.category_slug || '',
-            trope: newBook.value.trope?.join(', ') || '',
-            status: newBook.value.status,
-            label: newBook.value.label,
-            slug: newBook.value.slug || '', // Added slug
+            title: newBook.title,
+            description: newBook.description || '',
+            cover_image_url: newBook.cover_image_url || '',
+            category_slug: newBook.category_slug || '',
+            trope: Array.isArray(newBook.trope) ? newBook.trope.join(', ') : '',
+            status: newBook.status,
+            label: newBook.label,
+            slug: newBook.slug || '',
         }
         console.log('📝 Form data after pre-population:', formData.value)
     }
 }, { immediate: true, deep: true })
 
-// Generate slug from title
-const generateSlug = () => {
-    if (!formData.value.title?.trim()) {
+// ✨ IMPROVEMENT: Generate slug automatically when the title changes
+watch(() => formData.value.title, (newTitle) => {
+    if (!newTitle?.trim()) {
         formData.value.slug = ''
-        return
+    } else {
+        formData.value.slug = newTitle
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '')
     }
-    formData.value.slug = formData.value.title
-        .trim()
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '')
-    console.log('🔗 Generated slug:', formData.value.slug)
-    // Emit the slug update to parent
     emit('update-field', 'slug', formData.value.slug)
-}
+})
+
 
 // Cover image handling
 const coverImageFile = ref<File | null>(null)
@@ -138,9 +125,7 @@ const handleCoverUpload = async () => {
 
 // Handlers
 const handleFieldUpdate = (field: keyof FormData, value: unknown) => {
-    // Update local form data immediately for reactivity
-    formData.value[field] = value as never
-    // Emit to parent
+    (formData.value as any)[field] = value
     emit('update-field', field, value)
     console.log(`📝 Field updated: ${field} = ${value}`)
 }
@@ -165,9 +150,9 @@ const handleSubmitForReview = () => {
             <div class="space-y-2">
                 <Label for="title">Title *</Label>
                 <Input id="title" v-model="formData.title" placeholder="Enter book title"
-                    :class="{ 'border-red-500': errors.title }" @input="() => { generateSlug(); handleFieldUpdate('title', formData.title); }" />
+                    :class="{ 'border-red-500': errors.title }"
+                    @input="handleFieldUpdate('title', ($event.target as HTMLInputElement).value)" />
                 <p v-if="errors.title" class="text-red-500 text-xs mt-1">{{ errors.title }}</p>
-                <!-- Slug preview -->
                 <p v-if="formData.slug" class="text-xs text-gray-500 mt-1">
                     <span class="font-mono bg-gray-100 px-1.5 py-0.5 rounded">Your book link will be: /books/{{
                         formData.slug }}</span>
@@ -177,7 +162,7 @@ const handleSubmitForReview = () => {
             <div class="space-y-2">
                 <Label for="description">Description</Label>
                 <Textarea id="description" v-model="formData.description" placeholder="Write a short description..."
-                    rows="4" @input="handleFieldUpdate('description', ($event.target as HTMLInputElement).value)"/>
+                    rows="4" @input="handleFieldUpdate('description', ($event.target as HTMLInputElement).value)" />
             </div>
             <!-- Cover Image -->
             <div class="space-y-2">
@@ -186,12 +171,10 @@ const handleSubmitForReview = () => {
                     @change="handleCoverImageChange" />
                 <p v-if="coverImageName" class="text-sm text-gray-500 mt-1">Selected: {{ coverImageName }}</p>
                 <p v-if="errors.cover_image" class="text-red-500 text-xs mt-1">{{ errors.cover_image }}</p>
-                <!-- Preview -->
                 <div v-if="formData.cover_image_url" class="mt-3">
                     <img :src="formData.cover_image_url" alt="Current cover"
                         class="w-32 h-48 object-cover rounded border" />
                 </div>
-                <!-- Upload Button -->
                 <Button class="mt-2" type="button" variant="outline" size="sm" :disabled="!coverImageFile"
                     @click="handleCoverUpload">
                     Replace Cover
@@ -200,12 +183,14 @@ const handleSubmitForReview = () => {
             <!-- Category -->
             <div class="space-y-2">
                 <Label for="category">Category *</Label>
-                <Select :model-value="formData.category_slug" @update:model-value="(value) => handleFieldUpdate('category_slug', value)">
+                <!-- ✨ FIXED: Using props.categories for the dropdown -->
+                <Select :model-value="formData.category_slug"
+                    @update:model-value="(value) => handleFieldUpdate('category_slug', value)">
                     <SelectTrigger :class="{ 'border-red-500': errors.category_slug }">
                         <SelectValue placeholder="Select a category" />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem v-for="cat in staticCategories" :key="cat.slug" :value="cat.slug">
+                        <SelectItem v-for="cat in categories" :key="cat.slug" :value="cat.slug">
                             {{ cat.name }}
                         </SelectItem>
                     </SelectContent>
@@ -216,7 +201,8 @@ const handleSubmitForReview = () => {
             <div class="space-y-2">
                 <Label for="trope">Tropes (comma-separated) *</Label>
                 <Input id="trope" v-model="formData.trope" :class="{ 'border-red-500': errors.trope }"
-                    placeholder="enemies-to-lovers, slow-burn, forbidden-love" @input="handleFieldUpdate('trope', ($event.target as HTMLInputElement).value)"/>
+                    placeholder="enemies-to-lovers, slow-burn, forbidden-love"
+                    @input="handleFieldUpdate('trope', ($event.target as HTMLInputElement).value)" />
                 <p class="text-xs text-gray-500 mt-1">Separate multiple tropes with commas</p>
                 <p v-if="errors.trope" class="text-red-500 text-xs mt-1">{{ errors.trope }}</p>
             </div>
@@ -239,14 +225,13 @@ const handleSubmitForReview = () => {
             </div>
         </CardContent>
         <CardFooter class="flex justify-between">
-            <Button type="button" :disabled="loading.value" @click="handleSaveDraft">
-                {{ loading.value ? 'Saving...' : 'Save Draft' }}
+            <Button type="button" :disabled="loading" @click="handleSaveDraft">
+                {{ loading ? 'Saving...' : 'Save Draft' }}
             </Button>
-            <Button type="button" variant="default" :disabled="loading.value" @click="handleSubmitForReview">
-                {{ loading.value ? 'Submitting...' : 'Submit for Review' }}
+            <Button type="button" variant="default" :disabled="loading" @click="handleSubmitForReview">
+                {{ loading ? 'Submitting...' : 'Submit for Review' }}
             </Button>
         </CardFooter>
-        <!-- Global Error -->
         <Alert v-if="errors.global" variant="destructive" class="m-4">
             <AlertDescription>{{ errors.global }}</AlertDescription>
         </Alert>

@@ -1,5 +1,5 @@
 // server/api/books/authors/[slug]/chapters.post.ts
-import { defineEventHandler, getQuery, readBody, createError } from 'h3'
+import { defineEventHandler, getRouterParam, readBody, createError } from 'h3'
 import { serverSupabaseUser, serverSupabaseClient } from '#supabase/server'
 
 export default defineEventHandler(async (event) => {
@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // 2. Get book slug from route
-  const bookSlug = getQuery(event).slug as string
+  const bookSlug = getRouterParam(event, 'slug')
   if (!bookSlug) {
     throw createError({
       statusCode: 400,
@@ -80,7 +80,7 @@ export default defineEventHandler(async (event) => {
     const wordCount = content.trim().split(/\s+/).filter(word => word.length > 0).length
 
     // 8. Create the chapter
-    const { data: chapter, error: createError } = await supabase
+    const { data: chapter, error: insertError } = await supabase // ✨ RENAMED a
       .from('chapters')
       .insert({
         book_id: book.id,
@@ -94,9 +94,9 @@ export default defineEventHandler(async (event) => {
       .select()
       .single()
 
-    if (createError) {
-      console.error('Error creating chapter:', createError)
-      throw createError({
+    if (insertError) { // ✨ RENAMED here too
+      console.error('Error creating chapter:', insertError)
+      throw createError({ // Now this correctly calls the imported function
         statusCode: 500,
         statusMessage: 'Failed to create chapter'
       })

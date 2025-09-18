@@ -13,12 +13,6 @@
 
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <NuxtLink v-for="item in navItems" :key="item.name" :to="item.href"
-                        class="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                        <component :is="item.icon" class="h-4 w-4" />
-                        <span>{{ item.name }}</span>
-                    </NuxtLink>
-
                     <!-- Generic Dropdown (Optional — delete if not needed) -->
                     <DropdownMenu>
                         <DropdownMenuTrigger as-child @mouseenter="isDropdownOpen = true"
@@ -43,6 +37,14 @@
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
+
+                    <role-reader-only>
+                        <NuxtLink v-for="item in navItems" :key="item.name" :to="item.href"
+                            class="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                            <component :is="item.icon" class="h-4 w-4" />
+                            <span>{{ item.name }}</span>
+                        </NuxtLink>
+                    </role-reader-only>
                 </div>
 
                 <!-- Auth Buttons -->
@@ -56,7 +58,7 @@
                         </NuxtLink>
                     </Button>
                     <Button size="sm" as-child>
-                        <NuxtLink :to="isAuthenticated?'/dashboard':'/auth/login'" class="flex items-center space-x-1">
+                        <NuxtLink :to="isAuthenticated ? '/dashboard' : '/auth/login'" class="flex items-center space-x-1">
                             <LogIn v-if="!isAuthenticated" class="h-4 w-4" />
                             <LayoutDashboard v-else-if="isAuthenticated" class="size-4" />
                             <span>{{ isAuthenticated ? "Dashboard" : "Login" }}</span>
@@ -81,19 +83,10 @@
                                 </SheetTitle>
                             </SheetHeader>
                             <div class="mt-6 space-y-4">
-                                <!-- Nav Links -->
-                                <div class="space-y-2">
-                                    <NuxtLink v-for="item in navItems" :key="item.name" :to="item.href"
-                                        class="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-                                        @click="isOpen = false">
-                                        <component :is="item.icon" class="h-4 w-4" />
-                                        <span>{{ item.name }}</span>
-                                    </NuxtLink>
-                                </div>
-
                                 <!-- Dropdown Items (Mobile) -->
-                                <div class="border-t pt-4">
-                                    <h4 class="px-3 text-sm font-semibold text-muted-foreground mb-2 text-left">Categories</h4>
+                                <div class="space-y-2">
+                                    <h4 class="px-3 text-sm font-semibold text-muted-foreground mb-2 text-left">
+                                        Categories</h4>
                                     <div class="space-y-2">
                                         <NuxtLink v-for="item in dropdownItems" :key="item.name" :to="item.href"
                                             class="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -103,6 +96,18 @@
                                         </NuxtLink>
                                     </div>
                                 </div>
+
+                                <!-- Nav Links -->
+                                <role-reader-only>
+                                    <div class="border-t pt-4 space-y-2">
+                                        <NuxtLink v-for="item in navItems" :key="item.name" :to="item.href"
+                                            class="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            @click="isOpen = false">
+                                            <component :is="item.icon" class="h-4 w-4" />
+                                            <span>{{ item.name }}</span>
+                                        </NuxtLink>
+                                    </div>
+                                </role-reader-only>
 
                                 <!-- Auth (Mobile) -->
                                 <div class="border-t pt-4 space-y-2">
@@ -156,21 +161,24 @@ import {
     UserPlus,
     ChevronDown,
     LayoutDashboard,
-    Coins
+    Coins,
+    PenSquare, // Import the new icon
 } from 'lucide-vue-next'
 
 const isOpen = ref(false)
 const isDropdownOpen = ref(false)
-const {isAuthenticated} = useAuthState()
+const { isAuthenticated} = useAuthState()
 
 // Static nav items — edit as needed
 const navItems = [
+    // Add the new nav link object here
+    { name: 'Become an Author', href: '/become-an-author', icon: PenSquare },
 ]
 
 // Static dropdown items — edit or delete
 const dropdownItems = [
-    { name: 'Billionaire', href: '/category/billionaire',},
-    { name: 'Mafia', href: '/category/mafia',},
+    { name: 'Billionaire', href: '/category/billionaire', },
+    { name: 'Mafia', href: '/category/mafia', },
     { name: 'Fantasy', href: '/category/fantasy', },
     { name: 'LQBTQ+', href: '/category/lgbtq', },
     { name: 'Erotica', href: '/category/erotica', },
@@ -181,6 +189,7 @@ const dropdownItems = [
 
 <style lang="css" scoped>
 @reference "tailwindcss";
+
 .router-link-active {
     @apply text-red-400;
 }

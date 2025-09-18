@@ -1,16 +1,14 @@
 import { defineEventHandler, createError } from 'h3'
 import { serverSupabaseClient } from '#supabase/server'
-// import type { Database } from '~/types/database.types'
-
-// type Category = Database['public']['Tables']['categories']['Row']
 
 export default defineEventHandler(async (event) => {
   const supabase = await serverSupabaseClient(event)
   
   try {
+    // ✨ OPTIMIZED: Only select the columns we actually need
     const { data: categories, error } = await supabase
       .from('categories')
-      .select('*')
+      .select('slug, name') 
       .order('name', { ascending: true })
       
     if (error) {
@@ -24,7 +22,6 @@ export default defineEventHandler(async (event) => {
   } catch (err: unknown) {
     console.error('Error in categories API:', err)
 
-    // 1. Check if it's an instance of Error
     if (err instanceof Error) {
       throw createError({
         statusCode: 500,
@@ -32,7 +29,6 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // 2. Check if it's an object with message/code
     if (err !== null && typeof err === 'object') {
       const errorObj = err as Record<string, unknown>
       const message = typeof errorObj.message === 'string' ? errorObj.message : 'Unknown error'
@@ -44,7 +40,6 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // 3. Fallback for primitives
     throw createError({
       statusCode: 500,
       statusMessage: `Unexpected error: ${String(err)}`
