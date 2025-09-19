@@ -1,4 +1,3 @@
-// composables/useCreateChapter.ts
 import { ref } from 'vue'
 import type { Database } from '~/types/database.types'
 

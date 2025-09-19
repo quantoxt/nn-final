@@ -135,7 +135,17 @@ const handleSaveDraft = () => {
 }
 const handleSubmitForReview = () => {
     console.log('📤 Submit for review clicked')
-    emit('submit-for-review')
+    console.log('📚 Current book slug:', props.book?.slug)
+    console.log('📝 Form data:', formData.value)
+
+    if (!props.book?.slug) {
+        console.error('Book slug is missing!')
+        return
+    }
+    console.log('📖 Book from props:', props.book)
+    console.log('📝 Book slug:', props.book?.slug)
+    // Call update with slug
+    useUpdateBook().updateBook(props.book.slug, formData.value)
 }
 </script>
 

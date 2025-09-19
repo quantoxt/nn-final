@@ -1,0 +1,14 @@
+I have created and modified the following files to fix the book editing functionality:
+
+**Files Created:**
+
+*   `/home/quantoxt/Documents/PROJECTS/NUXT/nn-final/server/api/books/[slug]/index.put.ts`: Created this API endpoint to handle book update requests. It includes authorization logic to ensure that only the author of the book can update it.
+*   `/home/quantoxt/Documents/PROJECTS/NUXT/nn-final/app/composables/useUpdateBook.ts`: Created this composable to provide a clean and reusable way to interact with the new book update API endpoint from the frontend.
+
+**Files Modified:**
+
+*   `/home/quantoxt/Documents/PROJECTS/NUXT/nn-final/app/pages/dashboard/my-books/edit/[slug]/index.vue`:
+    *   Uncommented and implemented the `useUpdateBook` composable to enable the book update functionality.
+    *   Updated the `handleSaveChanges` function to call the `updateBook` function from the `useUpdateBook` composable.
+    *   Added calls to `refreshNuxtData` to refresh the book data after a successful update, ensuring that the UI displays the latest information.
+    *   Updated the `form-book-update` component to pass the `updateLoading` prop to disable the form buttons while the update is in progress.

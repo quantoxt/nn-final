@@ -1,49 +1,45 @@
-// composables/useChapter.ts
 import { ref } from 'vue'
 import type { Database } from '~/types/database.types'
 
 type Chapter = Database['public']['Tables']['chapters']['Row']
 
-export const useChapter = (chapterId: string) => {
-  console.log('🔍 useChapter called with chapterId:', chapterId)
+export const useChapter = (bookSlug: string, chapterId: string) => {
+  console.log('🔍 useChapter called with:', { bookSlug, chapterId })
   
   const loading = ref(false)
   const error = ref<string | null>(null)
   const chapter = ref<Chapter | null>(null)
   
   const fetchChapter = async () => {
-    if (!chapterId) {
-      console.warn('⚠️ Chapter ID is empty')
-    return
+    if (!bookSlug || !chapterId) {
+      console.warn('⚠️ Book slug and chapter ID are required')
+      return
     }
     
     loading.value = true
     error.value = null
     
     try {
-      console.log('🚀 Fetching chapter:', chapterId)
-      const response = await $fetch<Chapter>(`/api/books/authors/chapters/${chapterId}`)
+      console.log('🚀 Fetching chapter:', { bookSlug, chapterId })
+      // ✅ Fixed path to match new structure
+      const response = await $fetch<Chapter>(`/api/books/authors/${bookSlug}/chapters/${chapterId}`)
       chapter.value = response
       console.log('✅ Successfully fetched chapter:', response)
     } catch (err: unknown) {
       console.error('❌ Error fetching chapter:', err)
       
-      // Handle Error instances
       if (err instanceof Error) {
         error.value = err.message
         return
       }
       
-      // Handle object-like errors
       if (err !== null && typeof err === 'object') {
         const errorObj = err as Record<string, unknown>
         const message = typeof errorObj.message === 'string' ? errorObj.message : 'Unknown error'
-        const code = typeof errorObj.code === 'string' ? errorObj.code : 'INTERNAL_ERROR'
-        error.value = `${code}: ${message}`
+        error.value = `INTERNAL_ERROR: ${message}`
         return
       }
       
-      // Fallback for non-object errors
       error.value = `Unexpected error: ${String(err)}`
     } finally {
       loading.value = false
@@ -51,18 +47,19 @@ export const useChapter = (chapterId: string) => {
   }
   
   const updateChapter = async (updates: Partial<Chapter>) => {
-    if (!chapterId) {
-      error.value = 'Chapter ID is required'
-      return { success: false, message: 'Chapter ID is required' }
+    if (!bookSlug || !chapterId) {
+      error.value = 'Book slug and chapter ID are required'
+      return { success: false, message: 'Book slug and chapter ID are required' }
     }
     
     loading.value = true
     error.value = null
     
     try {
-      console.log('🚀 Updating chapter:', chapterId, 'with updates:', updates)
+      console.log('🚀 Updating chapter:', { bookSlug, chapterId, updates })
+      // ✅ Fixed path
       const response = await $fetch<{ chapter: Chapter; message: string }>(
-        `/api/books/authors/chapters/${chapterId}`,
+        `/api/books/authors/${bookSlug}/chapters/${chapterId}`,
         {
           method: 'PUT',
           body: updates
@@ -76,22 +73,18 @@ export const useChapter = (chapterId: string) => {
     } catch (err: unknown) {
       console.error('❌ Error updating chapter:', err)
       
-      // Handle Error instances
       if (err instanceof Error) {
         error.value = err.message
         return { success: false, message: err.message }
       }
       
-      // Handle object-like errors
       if (err !== null && typeof err === 'object') {
         const errorObj = err as Record<string, unknown>
         const message = typeof errorObj.message === 'string' ? errorObj.message : 'Unknown error'
-        const code = typeof errorObj.code === 'string' ? errorObj.code : 'INTERNAL_ERROR'
-        error.value = `${code}: ${message}`
+        error.value = `INTERNAL_ERROR: ${message}`
         return { success: false, message: error.value }
       }
       
-      // Fallback for non-object errors
       const errorMessage = `Unexpected error: ${String(err)}`
       error.value = errorMessage
       return { success: false, message: errorMessage }
@@ -101,18 +94,19 @@ export const useChapter = (chapterId: string) => {
   }
   
   const deleteChapter = async () => {
-    if (!chapterId) {
-      error.value = 'Chapter ID is required'
-      return { success: false, message: 'Chapter ID is required' }
+    if (!bookSlug || !chapterId) {
+      error.value = 'Book slug and chapter ID are required'
+      return { success: false, message: 'Book slug and chapter ID are required' }
     }
     
     loading.value = true
     error.value = null
     
     try {
-      console.log('🚀 Deleting chapter:', chapterId)
+      console.log('🚀 Deleting chapter:', { bookSlug, chapterId })
+      // ✅ Fixed path
       const response = await $fetch<{ message: string }>(
-        `/api/books/authors/chapters/${chapterId}`,
+        `/api/books/authors/${bookSlug}/chapters/${chapterId}`,
         { method: 'DELETE' }
       )
       
@@ -123,22 +117,18 @@ export const useChapter = (chapterId: string) => {
     } catch (err: unknown) {
       console.error('❌ Error deleting chapter:', err)
       
-      // Handle Error instances
       if (err instanceof Error) {
         error.value = err.message
         return { success: false, message: err.message }
       }
       
-      // Handle object-like errors
       if (err !== null && typeof err === 'object') {
         const errorObj = err as Record<string, unknown>
         const message = typeof errorObj.message === 'string' ? errorObj.message : 'Unknown error'
-        const code = typeof errorObj.code === 'string' ? errorObj.code : 'INTERNAL_ERROR'
-        error.value = `${code}: ${message}`
+        error.value = `INTERNAL_ERROR: ${message}`
         return { success: false, message: error.value }
       }
       
-      // Fallback for non-object errors
       const errorMessage = `Unexpected error: ${String(err)}`
       error.value = errorMessage
       return { success: false, message: errorMessage }

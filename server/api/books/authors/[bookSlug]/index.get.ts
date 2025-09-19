@@ -12,11 +12,11 @@ export default defineEventHandler(async (event) => {
   }
   
   // 2. Get book slug from route
-  const bookSlug = getRouterParam(event, 'slug')
+  const bookSlug = getRouterParam(event, 'bookSlug')
   if (!bookSlug) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Book slug is required'
+      statusMessage: 'Book slug is required '
     })
   }
   

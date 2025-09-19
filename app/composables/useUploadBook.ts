@@ -93,7 +93,7 @@ export function useUploadBook() {
       const bookStatus = metadata.isDraft ? 'draft' : 'pending_review'
 
       // ✅ Send to API — chapter.content is text, not content_url
-      const response = await $fetch('/api/books/authors/post', {
+      const response = await $fetch('/api/books/authors', {
         method: 'POST',
         body: {
           title: metadata.title,

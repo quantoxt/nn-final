@@ -1,0 +1,400 @@
+/home/quantoxt/Documents/PROJECTS/NUXT/nn-final/
+├───.env
+├───.gitignore
+├───changes.txt
+├───components.json
+├───error-fixer.txt
+├───eslint.config.mjs
+├───nuxt.config.ts
+├───package-lock.json
+├───package.json
+├───README.md
+├───server-side-rules.txt
+├───structure.txt
+├───tsconfig.json
+├───.git/
+├───.nuxt/
+├───.vscode/
+│   └───settings.json
+├───app/
+│   ├───app.vue
+│   ├───assets/
+│   │   ├───css/
+│   │   │   ├───cards.css
+│   │   │   ├───default.css
+│   │   │   ├───global.css
+│   │   │   └───tailwind.css
+│   │   └───svg/
+│   │       ├───book-open-fill.svg
+│   │       └───book-read-fill.svg
+│   ├───components/
+│   │   ├───form/
+│   │   │   ├───book-update.vue
+│   │   │   ├───book-upload.vue
+│   │   │   ├───forgot-password.vue
+│   │   │   ├───login.vue
+│   │   │   ├───sign-up.vue
+│   │   │   └───update-password.vue
+│   │   ├───misc/
+│   │   │   ├───dashboard/
+│   │   │   │   ├───BookEditPage.vue
+│   │   │   │   ├───chapter-editor.vue
+│   │   │   │   ├───chapter-list.vue
+│   │   │   │   ├───chapter-navigation.vue
+│   │   │   │   ├───my-books-navbar.vue
+│   │   │   │   ├───settings-navbar.vue
+│   │   │   │   └───users-settings-navbar.vue
+│   │   │   ├───dashboard.vue
+│   │   │   ├───footer.vue
+│   │   │   ├───logout-button.vue
+│   │   │   ├───navbar.vue
+│   │   │   ├───sidebar.vue
+│   │   │   └───Spinner.vue
+│   │   ├───mui/
+│   │   │   ├───cards/
+│   │   │   │   ├───BigBookCard.vue
+│   │   │   │   ├───CatCard.vue
+│   │   │   │   ├───CategoryBookCard.vue
+│   │   │   │   ├───ChapterCard.vue
+│   │   │   │   ├───col-book-card.vue
+│   │   │   │   ├───HomeBookCard.vue
+│   │   │   │   ├───HookCard.vue
+│   │   │   │   ├───Laboratory.vue
+│   │   │   │   ├───LatestBookCard.vue
+│   │   │   │   ├───MainCategoryCard.vue
+│   │   │   │   ├───PopularBookCard.vue
+│   │   │   │   ├───ReviewCard.vue
+│   │   │   │   └───row-book-card.vue
+│   │   │   ├───misc/
+│   │   │   │   ├───admin-comps/
+│   │   │   │   ├───author-comps/
+│   │   │   │   ├───reader-comps/
+│   │   │   │   ├───BookCarousel.vue
+│   │   │   │   ├───SortedCategory.vue
+│   │   │   │   └───Spinner.vue
+│   │   │   ├───Button.vue
+│   │   │   ├───Navbar.vue
+│   │   │   └───NavbarComp.vue
+│   │   ├───Pages/
+│   │   │   ├───BookDetails/
+│   │   │   │   ├───Chapters.vue
+│   │   │   │   └───Hero.vue
+│   │   │   ├───Categories/
+│   │   │   ├───Home/
+│   │   │   │   ├───Category/
+│   │   │   │   │   ├───BillionaireBooks.vue
+│   │   │   │   │   ├───EroticaBooks.vue
+│   │   │   │   │   ├───FantasyBooks.vue
+│   │   │   │   │   ├───LatestBooks.vue
+│   │   │   │   │   ├───LgbtqBooks.vue
+│   │   │   │   │   ├───LimitedEdition.vue
+│   │   │   │   │   ├───MafiaBooks.vue
+│   │   │   │   │   ├───PopularBooks.vue
+│   │   │   │   │   ├───TrendingBooks.vue
+│   │   │   │   │   ├───WerewolfBooks.vue
+│   │   │   │   │   └───YoungAdultBooks.vue
+│   │   │   │   ├───Hero.vue
+│   │   │   │   ├───Hooks.vue
+│   │   │   │   ├───Reviews.vue
+│   │   │   │   └───Test.vue
+│   │   ├───role/
+│   │   │   ├───admin-only.vue
+│   │   │   ├───admin.vue
+│   │   │   ├───author-only.vue
+│   │   │   ├───author.vue
+│   │   │   ├───authorizer.vue
+│   │   │   ├───index.ts
+│   │   │   ├───reader-only.vue
+│   │   │   └───reader.vue
+│   │   ├───supabase/
+│   │   │   ├───file-upload-button.vue
+│   │   │   ├───loading-spinner.vue
+│   │   │   ├───profile-upload.vue
+│   │   │   └───user-avatar.vue
+│   │   └───ui/
+│   │       ├───alert/
+│   │       │   ├───Alert.vue
+│   │       │   ├───AlertDescription.vue
+│   │       │   ├───AlertTitle.vue
+│   │       │   └───index.ts
+│   │       ├───alert-dialog/
+│   │       │   ├───AlertDialog.vue
+│   │       │   ├───AlertDialogAction.vue
+│   │       │   ├───AlertDialogCancel.vue
+│   │       │   ├───AlertDialogContent.vue
+│   │       │   ├───AlertDialogDescription.vue
+│   │       │   ├───AlertDialogFooter.vue
+│   │       │   ├───AlertDialogHeader.vue
+│   │       │   ├───AlertDialogTitle.vue
+│   │       │   ├───AlertDialogTrigger.vue
+│   │       │   └───index.ts
+│   │       ├───avatar/
+│   │       │   ├───Avatar.vue
+│   │       │   ├───AvatarFallback.vue
+│   │       │   ├───AvatarImage.vue
+│   │       │   └───index.ts
+│   │       ├───badge/
+│   │       │   ├───Badge.vue
+│   │       │   └───index.ts
+│   │       ├───button/
+│   │       │   ├───Button.vue
+│   │       │   └───index.ts
+│   │       ├───card/
+│   │       │   ├───Card.vue
+│   │       │   ├───CardAction.vue
+│   │       │   ├───CardContent.vue
+│   │       │   ├───CardDescription.vue
+│   │       │   ├───CardFooter.vue
+│   │       │   ├───CardHeader.vue
+│   │       │   ├───CardTitle.vue
+│   │       │   └───index.ts
+│   │       ├───checkbox/
+│   │       │   ├───Checkbox.vue
+│   │       │   └───index.ts
+│   │       ├───dialog/
+│   │       │   ├───Dialog.vue
+│   │       │   ├───DialogClose.vue
+│   │       │   ├───DialogContent.vue
+│   │       │   ├───DialogDescription.vue
+│   │       │   ├───DialogFooter.vue
+│   │       │   ├───DialogHeader.vue
+│   │       │   ├───DialogOverlay.vue
+│   │       │   ├───DialogScrollContent.vue
+│   │       │   ├───DialogTitle.vue
+│   │       │   ├───DialogTrigger.vue
+│   │       │   └───index.ts
+│   │       ├───dropdown-menu/
+│   │       │   ├───DropdownMenu.vue
+│   │       │   ├───DropdownMenuCheckboxItem.vue
+│   │       │   ├───DropdownMenuContent.vue
+│   │       │   ├───DropdownMenuGroup.vue
+│   │       │   ├───DropdownMenuItem.vue
+│   │       │   ├───DropdownMenuLabel.vue
+│   │       │   ├───DropdownMenuRadioGroup.vue
+│   │       │   ├───DropdownMenuRadioItem.vue
+│   │       │   ├───DropdownMenuSeparator.vue
+│   │       │   ├───DropdownMenuShortcut.vue
+│   │       │   ├───DropdownMenuSub.vue
+│   │       │   ├───DropdownMenuSubContent.vue
+│   │       │   ├───DropdownMenuSubTrigger.vue
+│   │       │   ├───DropdownMenuTrigger.vue
+│   │       │   └───index.ts
+│   │       ├───input/
+│   │       │   ├───index.ts
+│   │       │   └───Input.vue
+│   │       ├───label/
+│   │       │   ├───index.ts
+│   │       │   └───Label.vue
+│   │       ├───radio-group/
+│   │       │   ├───index.ts
+│   │       │   ├───RadioGroup.vue
+│   │       │   └───RadioGroupItem.vue
+│   │       ├───select/
+│   │       │   ├───index.ts
+│   │       │   ├───Select.vue
+│   │       │   ├───SelectContent.vue
+│   │       │   ├───SelectGroup.vue
+│   │       │   ├───SelectItem.vue
+│   │       │   ├───SelectItemText.vue
+│   │       │   ├───SelectLabel.vue
+│   │       │   ├───SelectScrollDownButton.vue
+│   │       │   ├───SelectScrollUpButton.vue
+│   │       │   ├───SelectSeparator.vue
+│   │       │   ├───SelectTrigger.vue
+│   │       │   └───SelectValue.vue
+│   │       ├───separator/
+│   │       │   ├───index.ts
+│   │       │   └───Separator.vue
+│   │       ├───sheet/
+│   │       │   ├───index.ts
+│   │       │   ├───Sheet.vue
+│   │       │   ├───SheetClose.vue
+│   │       │   ├───SheetContent.vue
+│   │       │   ├───SheetDescription.vue
+│   │       │   ├───SheetFooter.vue
+│   │       │   ├───SheetHeader.vue
+│   │       │   ├───SheetOverlay.vue
+│   │       │   ├───SheetTitle.vue
+│   │       │   └───SheetTrigger.vue
+│   │       ├───sidebar/
+│   │       │   ├───index.ts
+│   │       │   ├───Sidebar.vue
+│   │       │   ├───SidebarContent.vue
+│   │       │   ├───SidebarFooter.vue
+│   │       │   ├───SidebarGroup.vue
+│   │       │   ├───SidebarGroupAction.vue
+│   │       │   ├───SidebarGroupContent.vue
+│   │       │   ├───SidebarGroupLabel.vue
+│   │       │   ├───SidebarHeader.vue
+│   │       │   ├───SidebarInput.vue
+│   │       │   ├───SidebarInset.vue
+│   │       │   ├───SidebarMenu.vue
+│   │       │   ├───SidebarMenuAction.vue
+│   │       │   ├───SidebarMenuBadge.vue
+│   │       │   ├───SidebarMenuButton.vue
+│   │       │   ├───SidebarMenuButtonChild.vue
+│   │       │   ├───SidebarMenuItem.vue
+│   │       │   ├───SidebarMenuSkeleton.vue
+│   │       │   ├───SidebarMenuSub.vue
+│   │       │   ├───SidebarMenuSubButton.vue
+│   │       │   ├───SidebarMenuSubItem.vue
+│   │       │   ├───SidebarProvider.vue
+│   │       │   ├───SidebarRail.vue
+│   │       │   ├───SidebarSeparator.vue
+│   │       │   ├───SidebarTrigger.vue
+│   │       │   └───utils.ts
+│   │       ├───skeleton/
+│   │       │   ├───index.ts
+│   │       │   └───Skeleton.vue
+│   │       ├───sonner/
+│   │       │   ├───index.ts
+│   │       │   └───Sonner.vue
+│   │       ├───switch/
+│   │       │   ├───index.ts
+│   │       │   └───Switch.vue
+│   │       ├───textarea/
+│   │       │   ├───index.ts
+│   │       │   └───Textarea.vue
+│   │       └───tooltip/
+│   │           ├───index.ts
+│   │           ├───Tooltip.vue
+│   │           ├───TooltipContent.vue
+│   │           ├───TooltipProvider.vue
+│   │           └───TooltipTrigger.vue
+│   ├───composables/
+│   │   ├───useAllBooks.ts
+│   │   ├───useAuthorization.ts
+│   │   ├───useAuthState.ts
+│   │   ├───useAvatarStorage.ts
+│   │   ├───useBecomeAuthor.ts
+│   │   ├───useBook.ts
+│   │   ├───useCategories.ts
+│   │   ├───useChapter.ts
+│   │   ├───useChapterEditor.ts
+│   │   ├───useChapters.ts
+│   │   ├───useCompactNumber.ts
+│   │   ├───useCreateChapter.ts
+│   │   ├───useCurrentUserImage.ts
+│   │   ├───useCurrentUserName.ts
+│   │   ├───useDeleteChapters.ts
+│   │   ├───useFileUpload.ts
+│   │   ├───useGreeting.ts
+│   │   ├───useRealtimeSubscription.ts
+│   │   ├───useRelativetime.ts
+│   │   ├───useReorderChapters.ts
+│   │   ├───useSingleBook.ts
+│   │   ├───useSupabaseRealtime.ts
+│   │   ├───useUpdateBook.ts
+│   │   ├───useUpdateChapter.ts
+│   │   ├───useUploadBook.ts
+│   │   ├───useUserBooks.ts
+│   │   └───useUserProfile.ts
+│   ├───data/
+│   │   ├───sidebar-links/
+│   │   │   ├───admin.json
+│   │   │   ├───author.json
+│   │   │   └───reader.json
+│   │   ├───books.json
+│   │   ├───cat-cards.json
+│   │   ├───footerlinks.json
+│   │   ├───hooks.json
+│   │   ├───navlinks.json
+│   │   ├───navLinks.ts
+│   │   └───reviews.json
+│   ├───layouts/
+│   │   ├───auth-layout.vue
+│   │   ├───book-layout.vue
+│   │   ├───dash-layout.vue
+│   │   └───default.vue
+│   ├───lib/
+│   │   └───utils.ts
+│   ├───middleware/
+│   │   ├───auth.ts
+│   │   └───role.ts
+│   ├───pages/
+│   │   ├───about.vue
+│   │   ├───become-an-author.vue
+│   │   ├───index.vue
+│   │   ├───auth/
+│   │   │   ├───error.vue
+│   │   │   ├───forgot-password.vue
+│   │   │   ├───login.vue
+│   │   │   ├───sign-up-success.vue
+│   │   │   ├───sign-up.vue
+│   │   │   └───update-password.vue
+│   │   ├───category/
+│   │   │   ├───[slug].vue
+│   │   │   └───[book]/
+│   │   │       └───[chapters]/
+│   │   │           └───[chapter_slug].vue
+│   │   ├───coins-shop/
+│   │   │   ├───checkout.vue
+│   │   │   ├───failed.vue
+│   │   │   ├───index.vue
+│   │   │   └───success.vue
+│   │   └───dashboard/
+│   │       ├───my-books/
+│   │       │   ├───edit/
+│   │       │   │   └───[slug]/
+│   │       │   │       ├───add-chapter.vue
+│   │       │   │       └───index.vue
+│   │       │   ├───all.vue
+│   │       │   ├───drafs.vue
+│   │       │   ├───index.vue
+│   │       │   ├───new-book.vue
+│   │       │   ├───pending.vue
+│   │       │   ├───published.vue
+│   │       │   └───rejected.vue
+│   │       ├───settings/
+│   │       │   ├───account.vue
+│   │       │   └───profile.vue
+│   │       ├───users/
+│   │       │   ├───admins.vue
+│   │       │   ├───all.vue
+│   │       │   ├───authors.vue
+│   │       │   ├───index.vue
+│   │       │   └───readers.vue
+│   │       ├───coins-management.vue
+│   │       ├───index.vue
+│   │       ├───library.vue
+│   │       └───overview.vue
+│   └───types/
+│       └───database.types.ts
+├───node_modules/
+├───public/
+│   ├───favicon.ico
+│   └───robots.txt
+└───server/
+    ├───new_user_trigger.sql
+    ├───api/
+    │   ├───auth/
+    │   │   └───confirm.get.ts
+    │   ├───books/
+    │   │   ├───all.get.ts
+    │   │   ├───[slug]/
+    │   │   │   ├───chapters.get.ts
+    │   │   │   ├───get.ts
+│   │   │   ├───index.get.ts
+│   │   │   └───index.put.ts
+│   │   └───authors/
+│   │       └───[slug]/
+│   │           ├───chapters/
+│   │           ├───chapters.delete.ts
+│   │           ├───chapters.get.ts
+│   │           ├───chapters.post.ts
+│   │           ├───chapters.put.ts
+│   │           ├───delete.ts
+│   │           └───put.ts
+│   ├───category/
+│   │   ├───[slug].get.ts
+│   │   ├───category.get.ts
+│   │   └───index.get.ts
+│   ├───chapters/
+│   │   └───unlock.post.ts
+│   ├───paystack/
+│   │   ├───initialize-transaction.post.ts
+│   │   └───webhook.post.ts
+│   └───user/
+│       └───become-author.post.ts
+└───utils/
+    └───supabase.ts

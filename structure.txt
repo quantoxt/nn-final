@@ -1,0 +1,34 @@
+/home/quantoxt/Documents/PROJECTS/NUXT/nn-final/server/
+├───new_user_trigger.sql
+├───api/
+│   ├───auth/
+│   │   └───confirm.get.ts
+│   ├───books/
+│   │   ├───all.get.ts
+│   │   ├───[slug]/
+│   │   │   ├───chapters.get.ts
+│   │   │   ├───get.ts
+│   │   │   ├───index.get.ts
+│   │   │   └───index.put.ts
+│   │   └───authors/
+│   │       └───[slug]/
+│   │           ├───chapters/
+│   │           ├───chapters.delete.ts
+│   │           ├───chapters.get.ts
+│   │           ├───chapters.post.ts
+│   │           ├───chapters.put.ts
+│   │           ├───delete.ts
+│   │           └───put.ts
+│   ├───category/
+│   │   ├───[slug].get.ts
+│   │   ├───category.get.ts
+│   │   └───index.get.ts
+│   ├───chapters/
+│   │   └───unlock.post.ts
+│   ├───paystack/
+│   │   ├───initialize-transaction.post.ts
+│   │   └───webhook.post.ts
+│   └───user/
+│       └───become-author.post.ts
+└───utils/
+    └───supabase.ts

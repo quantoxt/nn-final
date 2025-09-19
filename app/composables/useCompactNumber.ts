@@ -1,4 +1,4 @@
-import type { computed, ComputedRef } from 'vue'
+import type { ComputedRef } from 'vue'
 
 export function useCompactNumber(value: Ref<number | string>): ComputedRef<string> {
   return computed(() => {

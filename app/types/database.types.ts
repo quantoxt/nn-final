@@ -170,6 +170,7 @@ export type Database = {
           is_locked: boolean
           reading_sessions_chapter_id: string | null
           updated_at: string
+          word_count: number | null
         }
         Insert: {
           book_id?: string
@@ -182,6 +183,7 @@ export type Database = {
           is_locked?: boolean
           reading_sessions_chapter_id?: string | null
           updated_at?: string
+          word_count?: number | null
         }
         Update: {
           book_id?: string
@@ -194,6 +196,7 @@ export type Database = {
           is_locked?: boolean
           reading_sessions_chapter_id?: string | null
           updated_at?: string
+          word_count?: number | null
         }
         Relationships: [
           {

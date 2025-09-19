@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   try {
     const { data, error } = await supabase
       .from('books')
-      .select('*, categories(name, slug), profiles(username, avatar_url)')
+      .select('*, categories(name, slug), profiles(id, username, avatar_url)')
       .eq('slug', slug)
       .single()
 
@@ -33,9 +33,38 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    return data
+    // Fetch chapters for this book
+    const { data: chapters, error: chaptersError } = await supabase
+      .from('chapters')
+      .select(`
+        id, 
+        chapter_number, 
+        chapter_title, 
+        content,
+        is_locked, 
+        coin_cost, 
+        created_at, 
+        updated_at, 
+        word_count,
+        book_id
+      `)
+      .eq('book_id', data.id)
+      .order('chapter_number', { ascending: true })
+
+    if (chaptersError) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: `Failed to fetch chapters: ${chaptersError.message}`
+      })
+    }
+
+    // Return book with chapters
+    return {
+      ...data,
+      chapters: chapters || []
+    }
   } catch (err) {
-    console.error('Error in /api/books/[slug].get.ts:', err)
+    console.error('Error in /api/books/[slug]/index.get.ts:', err)
     throw err
   }
 })

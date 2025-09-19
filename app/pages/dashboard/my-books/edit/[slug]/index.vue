@@ -3,13 +3,10 @@ import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { toast } from 'vue-sonner'
 
-// Import your custom composables and the new form component
+// Import composables and components
 import { useBook } from '~/composables/useBook'
-import { useCategories } from '~/composables/useCategories' // We'll need to create this
-// We will create this composable next to handle the update logic
-// import { useUpdateBook } from '~/composables/useUpdateBook' 
-
-// UI Components
+import { useCategories } from '~/composables/useCategories'
+import { useUpdateBook } from '~/composables/useUpdateBook'
 import { Button } from '~/components/ui/button'
 import { ArrowLeft } from 'lucide-vue-next'
 
@@ -20,71 +17,88 @@ definePageMeta({
 
 const route = useRoute()
 const router = useRouter()
-const slug = route.params.slug as string
 
-// Fetch the book data using the composable we already fixed
-const { book, pending: bookLoading, error: bookError } = useBook(slug)
-// Fetch the list of all categories for the dropdown
+// ✅ Reactive slug
+const currentSlug = ref(route.params.slug as string)
+
+// ✅ Reactive book composable
+const { book, pending: bookLoading, error: bookError, refresh } = useBook(currentSlug.value)
 const { categories, pending: categoriesLoading, error: categoriesError } = useCategories()
 
-// // Composable for updating the book (we will create this)
-// const { updateBook, loading: updateLoading, error: updateError } = useUpdateBook()
+const { updateBook, loading: updateLoading } = useUpdateBook()
 
-// A local ref to store the state of the book being edited.
-// This gets updated by events from the child form component.
+// ✅ Watch for route changes
+watch(() => route.params.slug, (newSlug) => {
+    if (newSlug) {
+        currentSlug.value = newSlug as string
+        // Refresh the book data with new slug
+        refresh()
+    }
+})
+
+// Local state for the form's data
 const editableBook = ref<any>(null)
+const coverImageFile = ref<File | null>(null);
 
-// When the initial book data loads, populate our editable copy
+// Pre-populate the form when the book data is fetched
 watch(book, (newBook) => {
     if (newBook) {
         editableBook.value = JSON.parse(JSON.stringify(newBook))
     }
 }, { immediate: true })
 
-
-// Handler for when the form component emits an update
+// Update the local form state when the child component emits a change
 const handleFieldUpdate = (field: string, value: unknown) => {
     if (editableBook.value) {
         editableBook.value[field] = value
     }
 }
 
-// Handler for the "Save Draft" button
+// Handler for when a new cover image is selected
+const handleCoverUploaded = (file: File) => {
+    coverImageFile.value = file;
+    toast.info(`New cover "${file.name}" selected. Save changes to apply other updates.`)
+}
+
+// Handler for saving all changes
 const handleSaveChanges = async () => {
     if (!editableBook.value) return
 
-    // IMPORTANT: Convert comma-separated trope string back to an array
-    if (typeof editableBook.value.trope === 'string') {
-        editableBook.value.trope = editableBook.value.trope.split(',').map((t: string) => t.trim()).filter(Boolean)
+    const payload = {
+        title: editableBook.value.title,
+        description: editableBook.value.description,
+        category_slug: editableBook.value.category_slug,
+        status: editableBook.value.status,
+        slug: editableBook.value.slug,
+        cover_image_url: editableBook.value.cover_image_url,
+        label: editableBook.value.label,
+        trope: editableBook.value.trope,
     }
 
-    toast.info('Saving changes...')
+    const result = await updateBook(currentSlug.value, payload)
 
-    // This is where we'll call our update function
-    // const { success, message } = await updateBook(slug, editableBook.value)
+    if (result.success) {
+        toast.success(result.message || 'Book updated successfully!')
 
-    // if (success) {
-    //     toast.success(message || 'Book updated successfully!')
-    //     // Optionally, you can refresh data or navigate
-    //     router.push('/dashboard/my-books/all')
-    // } else {
-    //     toast.error(message || 'Failed to update book.')
-    // }
-
-    // Placeholder until we create the update logic
-    console.log('Saving book data:', editableBook.value)
-    toast.success('Placeholder: Book save function called. See console.')
+        // If the slug was changed, navigate to the new URL
+        if (payload.slug && payload.slug !== currentSlug.value) {
+            // ✅ Navigate to new URL - the watch will handle updating the data
+            router.push(`/dashboard/my-books/edit/${payload.slug}`)
+        } else {
+            // Otherwise, refresh the current data
+            await refresh()
+        }
+    }
 }
 
-
-// Navigate back
+// Navigate back to the main book list
 const handleGoBack = () => {
     router.push('/dashboard/my-books/all')
 }
 </script>
 
 <template>
-    <div class="container py-8 max-w-4xl mx-auto">
+    <div class="container py-8 max-w-[1500px] mx-auto">
         <!-- Header -->
         <div class="flex items-center mb-6">
             <Button variant="ghost" size="sm" @click="handleGoBack" class="mr-4">
@@ -107,8 +121,8 @@ const handleGoBack = () => {
 
         <!-- Error State -->
         <div v-else-if="bookError || categoriesError" class="p-4 bg-destructive/10 text-destructive rounded">
-            <p v-if="bookError">Error loading book: {{ bookError.message }}</p>
-            <p v-if="categoriesError">Error loading categories: {{ categoriesError.message }}</p>
+            <p v-if="bookError">Error loading book: {{ bookError }}</p>
+            <p v-if="categoriesError">Error loading categories: {{ categoriesError }}</p>
         </div>
 
         <!-- Book Not Found -->
@@ -118,8 +132,9 @@ const handleGoBack = () => {
 
         <!-- Main Content -->
         <div v-else>
-            <form-book-update :book="book" :categories="categories" :loading="false" @update-field="handleFieldUpdate"
-                @save-draft="handleSaveChanges" @submit-for-review="handleSaveChanges" />
+            <FormBookUpdate :book="editableBook" :categories="categories" :loading="updateLoading"
+                @update-field="handleFieldUpdate" @cover-uploaded="handleCoverUploaded" @save-draft="handleSaveChanges"
+                @submit-for-review="handleSaveChanges" />
         </div>
     </div>
 </template>
